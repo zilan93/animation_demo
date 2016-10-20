@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>七夕</title>
+    <link href="css/animation.css" rel="stylesheet" type="text/css" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/pageA.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class="ani_wrap">
+    <ul class="content_wrap slide_effct">
+        <li class="bg1">
+            <div class="a_background">
+                <div class="a_background_top"></div>
+                <div class="a_background_middle"></div>
+                <div class="a_background_bottom"></div>
+            </div>
+        </li>
+        <li class="bg2"></li>
+        <li class="bg3"></li>
+    </ul>
+    <div id="boy" class="character"></div>
+    <div class="button"><button>点击运行动画</button></div>
+</div>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript">
+    //查看效果的按钮动画
+    var swipe = Swipe($(".ani_wrap"));
+    $(".button button").click(function () {
+        swipe.scrollTo($(".ani_wrap").width() * 2,5000);
+    });
+    //获取数据
+    function getRoadValue(className) {
+        var classObj = $(className);
+        return {
+            top : classObj.position().top,
+            height : classObj.height()
+        };
+    }
+    //得到具体数据
+    var pathY = function () {
+        var data = getRoadValue('.a_background_middle');
+        return data.top + data.height/2;
+    }();
+    //设置小男孩位置
+    var boyHei = $("#boy");
+    boyHei.css({
+        "top" : pathY - boyHei.height() +25 + "px"
+    })
+</script>
+</body>
+</html>
