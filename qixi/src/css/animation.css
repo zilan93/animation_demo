@@ -1,3 +1,5 @@
+/***小男孩走路***/
+.slow_walk{animation: man_walking 950ms steps(4) infinite;}
 @keyframes man_walking {
     0% {
         background-position:0px ;

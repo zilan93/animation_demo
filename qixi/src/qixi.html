@@ -20,10 +20,11 @@
         <li class="bg2"></li>
         <li class="bg3"></li>
     </ul>
-    <div id="boy" class="character"></div>
+    <div id="boy" class="character slow_walk"></div>
     <div class="button"><button>点击运行动画</button></div>
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
 <script type="text/javascript" src="js/swipe.js"></script>
 <script type="text/javascript">
     //查看效果的按钮动画
@@ -49,6 +50,11 @@
     boyHei.css({
         "top" : pathY - boyHei.height() +25 + "px"
     })
+
+    //小男孩走路
+    $("#boy").transition({
+        "left" : $(".ani_wrap").width() + "px"
+    },5000,"linear")
 </script>
 </body>
 </html>
