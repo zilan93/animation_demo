@@ -1,10 +1,17 @@
 /***小男孩走路***/
 .slow_walk{animation: man_walking 950ms steps(4) infinite;}
+.sun{animation: sunset 30s;}
+
 @keyframes man_walking {
     0% {
         background-position:0px ;
     }
     100% {
         background-position: -604px;
+    }
+}
+@keyframes sunset {
+    to {
+        transform:translate(-2000px,400px);
     }
 }

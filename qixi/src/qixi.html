@@ -16,6 +16,9 @@
                 <div class="a_background_middle"></div>
                 <div class="a_background_bottom"></div>
             </div>
+            <div class="sun"></div>
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
         </li>
         <li class="bg2"></li>
         <li class="bg3"></li>
@@ -26,35 +29,23 @@
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
 <script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript" src="js/BoyWalk.js"></script>
 <script type="text/javascript">
-    //查看效果的按钮动画
     var swipe = Swipe($(".ani_wrap"));
-    $(".button button").click(function () {
-        swipe.scrollTo($(".ani_wrap").width() * 2,5000);
-    });
-    //获取数据
-    function getRoadValue(className) {
-        var classObj = $(className);
-        return {
-            top : classObj.position().top,
-            height : classObj.height()
-        };
+    function scrollTo(time, proportionX) {
+        var disX = $(".ani_wrap").width() * proportionX;
+        swipe.scrollTo(disX,time);
     }
-    //得到具体数据
-    var pathY = function () {
-        var data = getRoadValue('.a_background_middle');
-        return data.top + data.height/2;
-    }();
-    //设置小男孩位置
-    var boyHei = $("#boy");
-    boyHei.css({
-        "top" : pathY - boyHei.height() +25 + "px"
-    })
-
-    //小男孩走路
-    $("#boy").transition({
-        "left" : $(".ani_wrap").width() + "px"
-    },5000,"linear")
+    //查看效果的按钮动画
+    var walk = BoyWalk();
+    $(".button button").click(function () {
+        walk.walkTo(5000,0.5)
+                .then(function () {
+                    scrollTo(15000,1)
+                }).then(function () {
+            return walk.walkTo(500,0);
+        });
+    });
 </script>
 </body>
 </html>
