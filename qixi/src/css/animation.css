@@ -1,7 +1,8 @@
 /***小男孩走路***/
 .slow_walk{animation: man_walking 950ms steps(4) infinite;}
 .sun{animation: sunset 30s;}
-
+.cloud1{animation:anicloud1 30s infinite alternate;}
+.cloud2{animation:anicloud2 60s infinite alternate;}
 @keyframes man_walking {
     0% {
         background-position:0px ;
@@ -13,5 +14,15 @@
 @keyframes sunset {
     to {
         transform:translate(-2000px,400px);
+    }
+}
+@keyframes anicloud1 {
+    to {
+        left:100%;
+    }
+}
+@keyframes anicloud2 {
+    to {
+        right:100%;
     }
 }

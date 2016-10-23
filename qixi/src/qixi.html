@@ -6,6 +6,7 @@
     <link href="css/animation.css" rel="stylesheet" type="text/css" />
     <link href="css/common.css" rel="stylesheet" type="text/css" />
     <link href="css/pageA.css" rel="stylesheet" type="text/css" />
+    <link href="css/pageB.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 <div class="ani_wrap">
@@ -20,7 +21,14 @@
             <div class="cloud cloud1"></div>
             <div class="cloud cloud2"></div>
         </li>
-        <li class="bg2"></li>
+        <li class="bg2">
+            <div class="b_background"></div>
+            <div class="b_background_light"></div>
+            <div class="door">
+                <div class="left_door"></div>
+                <div class="right_door"></div>
+            </div>
+        </li>
         <li class="bg3"></li>
     </ul>
     <div id="boy" class="character slow_walk"></div>
@@ -36,6 +44,7 @@
         var disX = $(".ani_wrap").width() * proportionX;
         swipe.scrollTo(disX,time);
     }
+    scrollTo(1000,1);
     //查看效果的按钮动画
     var walk = BoyWalk();
     $(".button button").click(function () {
