@@ -7,7 +7,7 @@ function Swipe(contanier) {
     //滑动对象
     var swipe = {};
     //获取li
-    var slides = element.find("li");
+    var slides = element.children("li");
     //获取外层容器的宽高
     var width = contanier.width();
     var heigth = contanier.height();

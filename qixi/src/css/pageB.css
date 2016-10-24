@@ -1,1 +1,9 @@
-.b_background{width:100%;height:100px;background: url("../images/QixiB-dark.png") no-repeat;background-size: 100% 100%;}
+.b_background{width:100%;height:100%;background: url("../images/QixiB-dark.png") no-repeat;background-size: 100% 100%;}
+.b_background_preload{background: url("../images/QixiB-bright.png") no-repeat;background-size:100% 100%;}
+.shop{position:absolute;left:28.9%;top:36.3%;width:39.8%;height:35.4%;}
+.shop .door{position:absolute;top:33.3%;left:58.5%;width:31.5%;height:66.5%;overflow:hidden;}
+.door>div{position:absolute;top:0;width:50%;height:100%;}
+.door .left_door{left:0;background: url("../images/door-left.png") no-repeat;background-size:100% 100%;}
+.door .right_door{right:0;background: url("../images/door-right.png") no-repeat;background-size:100% 100%;}
+.lamp_bright{background: url("../images/QixiB-bright.png") no-repeat;background-size:100% 100%;}
+.bird{position:absolute;right:-91px;top:5%;width:91px;height:71px;background: url("../images/bird.png") no-repeat;}

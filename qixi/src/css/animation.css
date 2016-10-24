@@ -3,26 +3,41 @@
 .sun{animation: sunset 30s;}
 .cloud1{animation:anicloud1 30s infinite alternate;}
 .cloud2{animation:anicloud2 60s infinite alternate;}
+.bird_fly{animation:birdFly 400ms steps(3) infinite;}
+.stars1 {animation:stars 800ms 500ms infinite alternate;}
+.stars2 {animation:stars 1000ms infinite alternate;}
+.stars3 {animation:stars 900ms  200ms infinite alternate;}
+.stars4 {animation:stars 1500ms infinite alternate;}
+.stars5 {animation:stars 2000ms  100ms infinite alternate;}
+.stars6 {animation:stars 1200ms infinite alternate;}
+.water_1{animation:shake 30s 1s infinite alternate;}
+.water_2{animation:shake 30s 2s infinite alternate;}
+.water_3{animation:shake 30s infinite alternate;}
+.water_4{animation:shake 30s 3s infinite alternate;}
 @keyframes man_walking {
-    0% {
-        background-position:0px ;
-    }
-    100% {
-        background-position: -604px;
-    }
+    0% {background-position:0px ;}
+    100% {background-position: -604px;}
 }
 @keyframes sunset {
-    to {
-        transform:translate(-2000px,400px);
-    }
+    to {transform:translate(-2000px,400px);}
 }
 @keyframes anicloud1 {
-    to {
-        left:100%;
-    }
+    to {left:100%;}
 }
 @keyframes anicloud2 {
-    to {
-        right:100%;
+    to {right:100%;}
+}
+@keyframes birdFly {
+    to {background-position:-273px 0;}
+}
+@keyframes stars {
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+@keyframes shake {
+    0%,100% {
+        transform:translate3d(0,0,0);
     }
+    10%,30%,50%,70%,90%{transform:translate3d(-30px,0px,0);}
+    20%,40%,60%,80%{transform:translate3d(30px,0px,0);}
 }
