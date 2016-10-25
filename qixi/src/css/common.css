@@ -8,7 +8,7 @@ ul li{list-style:none;}
 .content_wrap>li .ani_top{flex:auto;height:70%;background: url("../images/background/a_background_top.png") no-repeat;background-size: 34% 100%; }
 .content_wrap>li .ani_middle{height:15%;background: url("../images/background/a_background_middle.png") no-repeat;}
 .content_wrap>li .ani_bottom{height:15%;background: url("../images/background/a_background_botton.png") no-repeat;}
-.ani_wrap .character{position:absolute;bottom:20%;left:0;width:151px;height:291px;background: url("../images/person/boy-walk.png") no-repeat;}
+.character{position:absolute;bottom:20%;left:0;width:151px;height:291px;background: url("../images/person/boy-walk.png") no-repeat;}
 .ani_wrap .boy_flower{background: url("../images/person/boy-flower.png") no-repeat;}
 .button{position:absolute;bottom:10px;left:0;}
-
+.boyOriginal{background: url("../images/person/boy-rotate.png") no-repeat;}

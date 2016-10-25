@@ -1,87 +1,16 @@
-//灯动画
-var lamp = {
-    elem : $('.b_background'),
-    bright : function () {
-        this.elem.addClass('lamp_bright')
-    },
-    dark : function () {
-        this.elem.removeClass('lamp_bright')
-    }
-};
+var instanceX;
+var instanceY;
 var container = $(".ani_wrap");
-var swipe = Swipe(container);
 visualWidth = container.width();
 visualHeight = container.height();
-
-//页面滚动到指定位置
-function scrollTo(time,proportionX) {
-    var disX = visualWidth * proportionX;
-    swipe.scrollTo(disX,time);
-}
-//获取数据
-var getValue = function(className) {
-    var $elem = $(className);
-    return {
-        top : $elem.position().top,
-        height : $elem.height()
-    };
-};
-//路的Y轴
-var bridgeY = function () {
-    var data = getValue('.c_background_middle');
-    return data.top;
-}();
-////////
-//小女孩//
-////////
-var girl = {
-    elem:$(".girl"),
-    getHeight:function () {
-        return this.elem.height();
-    },
-    setOffset:function () {
-        this.elem.css({
-            left: visualWidth / 2,
-            top: bridgeY - this.getHeight()
-        });
+//动画结束事件
+var animationEnd = (function () {
+    var explorer = navigator.userAgent;
+    if(~explorer.indexOf('webkit')) {
+        return 'webkitAnimationEnd'
     }
-};
-//修正小女孩的位置
-girl.setOffset();
-swipe.scrollTo(visualWidth * 2,0);
-
-//开关门的效果
-function doorAction(left, right, time) {
-    var $door = (".door");
-    var doorLeft = $(".left_door");
-    var doorRight = $(".right_door");
-    var defer = $.Deferred();
-    var count = 2;
-    var complete = function () {
-        if(count == 1) {
-            defer.resolve();
-            return;
-        }
-        count--;
-    };
-    doorLeft.transition({
-        'left':left
-    },time,complete);
-    doorRight.transition({
-        'right':right
-    },time,complete);
-    return defer;
-}
-//开门
-function openDoor() {
-    return doorAction('-50%','-50%',2000);
-}
-//关门
-function shutDoor() {
-    return doorAction('0','0',2000);
-}
-
-var instanceX;
+    return 'animationEnd';
+})();
 /**
  * 小孩走路
  *
@@ -114,23 +43,23 @@ function BoyWalk() {
 ////////////////////////////////////////////////////////
 //===================动画处理============================ //
 ////////////////////////////////////////////////////////
-//暂停走路
+    //暂停走路
     function pauseWalk() {
-        $boy.addClass('pauseWalk');
+        $boy.removeClass('boy_flower').addClass("boy_rotate").addClass('pauseWalk');
     }
-//恢复走路
+    //恢复走路
     function restoreWalk() {
         $boy.removeClass('pauseWalk');
     }
-//小男孩走路动作
+    //小男孩走路动作
     function slowWalk() {
         $boy.addClass("slowWalk");
     }
-//计算位移的值
+    //计算位移的值
     function caculateDis(direction,proportion) {
         return (direction == 'x' ? visualWidth : visualHeight) * proportion;
     }
-//用transition运动到指定位置
+    //用transition运动到指定位置
     function startRun(options, runTimes) {
         //定义一个Deffered对象
         var dfdPlay = $.Deferred();
@@ -144,7 +73,7 @@ function BoyWalk() {
             });
         return dfdPlay;
     }
-//整合动画运动到指定坐标位置
+    //整合动画运动到指定坐标位置
     function walkRun(time,disX,disY) {
         time = time || 3000;
         slowWalk();
@@ -154,7 +83,6 @@ function BoyWalk() {
         }, time);
         return d1;
     }
-
     //走进商店
     function walkToshop(runTime) {
         var defer = $.Deferred();
@@ -165,7 +93,7 @@ function BoyWalk() {
         var doorOffsetTop = offsetDoor.top;
         //男孩当前的坐标
         var posBoy = $boy.position();
-        var boyPoxLeft = offsetBoy.left;
+        var boyPoxLeft = posBoy.left;
         var boyPoxTop = posBoy.top;
 
         //中间位置
@@ -174,10 +102,10 @@ function BoyWalk() {
         var doorTopMiddle = doorObj.height() /2;
 
         instanceX = (doorOffsetLeft + doorMiddle) - (boyPoxLeft + boyMiddle);
-        instanceY = boyPoxTop + boyHeight - doorOffsetTop  + (doorTopMiddle);
+        instanceY = boyPoxTop + boyHeight - (doorOffsetTop + doorTopMiddle);
         //开始走路
         var walkPlay = startRun({
-            transform:'translateX(' + instanceX + 'px),translateY(-' + instanceY + ')scale(0.5,0.5)',
+            transform:'translateX(' + instanceX + 'px),translateY(-' + instanceY + 'px),scale(0.5,0.5)',
             opacity:0.1
         },2000);
         walkPlay.done(function () {
@@ -192,10 +120,10 @@ function BoyWalk() {
     function talkFlower() {
         var defer = $.Deferred();
         setTimeout(function () {
-            $boy.addClass('boy_flower');
+            $boy.removeClass("slow_walk").addClass('boy_flower');
             defer.resolve()
         },1000);
-        return defer
+        return defer;
     }
     //走出店
     function walkOutShop(runTime) {
@@ -237,13 +165,115 @@ function BoyWalk() {
         getWidth:function () {
             return $boy.width();
         },
-        //复位初始状态
-        resetOriginal:function () {
-            this.stopWalk();
-            $boy.removeClass('slowWalk slowFlowerWalk').addClass('boyOriginal');
-        },
-        setFlowerWalk:function () {
-            $boy.addClass('slowFlowerWalk');
+        //转身动作
+        rotate:function (callback) {
+            restoreWalk();
+            $boy.addClass('rotate');
+            if(callback) {
+                $boy.on(animationEnd,function () {
+                    callback();
+                    $(this).off();
+                })
+            }
         }
     }
 }
+//开关门的效果
+function doorAction(left, right, time) {
+    var $door = (".door");
+    var doorLeft = $(".left_door");
+    var doorRight = $(".right_door");
+    var defer = $.Deferred();
+    var count = 2;
+    var complete = function () {
+        if(count == 1) {
+            defer.resolve();
+            return;
+        }
+        count--;
+    };
+    doorLeft.transition({
+        'left':left
+    },time,complete);
+    doorRight.transition({
+        'right':right
+    },time,complete);
+    return defer;
+}
+//开门
+function openDoor() {
+    return doorAction('-50%','-50%',2000);
+}
+//关门
+function shutDoor() {
+    return doorAction('0','0',2000);
+}
+//灯动画
+var lamp = {
+    elem : $('.b_background'),
+    bright : function () {
+        this.elem.addClass('lamp_bright')
+    },
+    dark : function () {
+        this.elem.removeClass('lamp_bright')
+    }
+};
+//页面滚动到指定位置
+function scrollTo(time,proportionX) {
+    var disX = visualWidth * proportionX;
+    swipe.scrollTo(disX,time);
+}
+//获取数据
+var getValue = function(className) {
+    var $elem = $(className);
+    return {
+        top : $elem.position().top,
+        height : $elem.height()
+    };
+};
+//路的Y轴
+var bridgeY = function () {
+    var data = getValue('.c_background_middle');
+    return data.top;
+}();
+////////
+//小女孩//
+////////
+var girl = {
+    elem:$(".girl"),
+    rotate:function () {
+        this.elem.addClass('girl_rotate');
+    },
+    getWidth:function () {
+        return this.elem.width();
+    },
+    getHeight:function () {
+        return this.elem.height();
+    },
+    getOffset:function () {
+        return this.elem.offset();
+    },
+    setOffset:function () {
+        this.elem.css({
+            left: visualWidth / 2,
+            top: bridgeY - this.getHeight()
+        });
+    }
+};
+//修正小女孩的位置
+girl.setOffset();
+//logo动画
+var logo = {
+    elem:$(".logo"),
+    run:function () {
+        this.elem.addClass('logolightSpeedIn')
+            .on(animationEnd,function () {
+                $(this).add('logoshake').off();
+            });
+    }
+};
+
+
+
+
+

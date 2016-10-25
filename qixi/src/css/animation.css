@@ -1,9 +1,11 @@
 /***小男孩走路***/
+.pauseWalk{animation-play-state: paused!important;}
 .slow_walk{animation: man_walking 950ms steps(4) infinite;}
 .sun{animation: sunset 30s;}
 .cloud1{animation:anicloud1 30s infinite alternate;}
 .cloud2{animation:anicloud2 60s infinite alternate;}
 .bird_fly{animation:birdFly 400ms steps(3) infinite;}
+.boy_flower{animation: man_walking 950ms steps(4) infinite;}
 .stars1 {animation:stars 800ms 500ms infinite alternate;}
 .stars2 {animation:stars 1000ms infinite alternate;}
 .stars3 {animation:stars 900ms  200ms infinite alternate;}
@@ -14,9 +16,24 @@
 .water_2{animation:shake 30s 2s infinite alternate;}
 .water_3{animation:shake 30s infinite alternate;}
 .water_4{animation:shake 30s 3s infinite alternate;}
+.boy_rotate{background: url("../images/person/boy-rotate.png") no-repeat;}
+.rotate{animation: man_rotate 950ms steps(6) forwards;}
+.girl_rotate{animation: girl_rotate 950ms steps(1,start) forwards;}
+.logolightSpeedIn{display:block;}
 @keyframes man_walking {
     0% {background-position:0px ;}
     100% {background-position: -604px;}
+}
+@keyframes man_rotate {
+    0% {background-position:0px ;}
+    100% {background-position: -604px;}
+}
+@keyframes girl_rotate {
+    0% {background-position: -151px 0;}
+    25% {background-position: 0 0;}
+    50% {background-position: -453px 0;}
+    75% {background-position: -604px 0;}
+    100% {background-position: -755px 0;}
 }
 @keyframes sunset {
     to {transform:translate(-2000px,400px);}
@@ -40,4 +57,7 @@
     }
     10%,30%,50%,70%,90%{transform:translate3d(-30px,0px,0);}
     20%,40%,60%,80%{transform:translate3d(30px,0px,0);}
+}
+@keyframes lightSpeedIn {
+    0%{}
 }

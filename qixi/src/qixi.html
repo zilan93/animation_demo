@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>七夕</title>
-    <link href="css/animation.css" rel="stylesheet" type="text/css" />
     <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <link href="css/animation.css" rel="stylesheet" type="text/css" />
     <link href="css/pageA.css" rel="stylesheet" type="text/css" />
     <link href="css/pageB.css" rel="stylesheet" type="text/css" />
     <link href="css/pageC.css" rel="stylesheet" type="text/css" />
@@ -61,6 +61,8 @@
                 <li class="stars5"></li>
                 <li class="stars6"></li>
             </ul>
+            <!--慕课网logo图-->
+            <div class="logo"></div>
         </li>
     </ul>
     <div id="boy" class="character slow_walk"></div>
@@ -71,77 +73,47 @@
 <script type="text/javascript" src="js/swipe.js"></script>
 <script type="text/javascript" src="js/QiXi.js"></script>
 <script type="text/javascript">
-    var container = $(".ani_wrap")
+    var container = $(".ani_wrap");
     var swipe = Swipe(container);
-    function scrollTo(time, proportionX) {
-        var disX = $(".ani_wrap").width() * proportionX;
-        swipe.scrollTo(disX,time);
-    }
-    scrollTo(1000,2);
     var boy = BoyWalk();
-    //右边飞鸟
-    var bird = {
-        elem:$(".bird"),
-        fly:function () {
-            this.elem.addClass("bird_fly");
-            this.elem.transition({
-                right:container.width()
-            },15000,'linear');
-        }
-    };
 
-    function startRun() {
-       boy.walkTo(2000, 0.5)
-                .then(function () {
-                    boy.stopWalk();
-                }).then(function () {
-            return openDoor();
-        }).then(function () {
-            lamp.bright();
-        }).then(function () {
-            return boy.toShop(2000)
-        }).then(function () {
-            return boy.talkFlower();
-        }).then(function () {
-            bird.fly();
-       }).then(function () {
-            return boy.outShop(2000);
-        }).then(function () {
-            return shutDoor();
-        }).then(function () {
-            lamp.dark();
-        });
-    }
-
-
-    var girl = {
-        elem:$(".girl"),
-        getHeight:function () {
-            return this.elem.height();
-        },
-        setOffset:function () {
-            this.elem.css({
-                left: visualWidth / 2,
-                top: bridgeY - this.getHeight()
+    boy.walkTo(5000,0.7).then(function () {
+        swipe.scrollTo(container.width() * 1,4000);
+    }).then(function () {
+        return boy.walkTo(4000,0.5);
+    }).then(function () {
+        return openDoor();
+    }).then(function () {
+        lamp.bright();
+    }).then(function () {
+        return boy.toShop(1000);
+    }).then(function () {
+        return boy.talkFlower();
+    }).then(function () {
+        return boy.outShop(1000);
+    }).then(function () {
+        return shutDoor();
+    }).then(function () {
+        lamp.dark();
+    }).then(function () {
+        swipe.scrollTo(container.width() * 2,4000);
+    }).then(function () {
+        return boy.walkTo(4000,0.15);
+    }).then(function () {
+        return boy.walkTo(1500,0.25,(bridgeY - girl.getHeight()) / visualHeight);
+    }).then(function () {
+        var proportionX = (girl.getOffset().left - boy.getWidth() + girl.getWidth() / 5) / visualWidth;
+        return boy.walkTo(1500,proportionX);
+    }).then(function () {
+        return boy.stopWalk();
+    }).then(function () {
+        setTimeout(function () {
+            girl.rotate();
+            boy.rotate(function () {
+                login.run();
             });
-        },
-        getOffset: function() {
-            return this.elem.offset();
-        },
-        getWidth: function() {
-            return this.elem.width();
-        }
-    };
-    $(".button button").click(function () {
-        boy.walkTo(2000,0.15).then(function () {
-            return boy.walkTo(1500,0.25,(bridgeY - girl.getHeight() / visualHeight));
-        }).then(function () {
-            var proportionX = (girl.getOffset().left - boy.getWidth() + girl.getWidth() / 5) / visualWidth;
-            return boy.walkTo(1500,proportionX);
-        }).then(function () {
-            boy.resetOriginal();
-        })
-    });
+        },1000);
+    })
 </script>
 </body>
 </html>
