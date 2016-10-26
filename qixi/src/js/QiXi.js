@@ -7,9 +7,9 @@ visualHeight = container.height();
 var animationEnd = (function () {
     var explorer = navigator.userAgent;
     if(~explorer.indexOf('webkit')) {
-        return 'webkitAnimationEnd'
+        return 'webkitAnimationEnd';
     }
-    return 'animationEnd';
+    return 'animationend';
 })();
 /**
  * 小孩走路
@@ -262,18 +262,72 @@ var girl = {
 };
 //修正小女孩的位置
 girl.setOffset();
+////////
+//logo//
+////////
 //logo动画
 var logo = {
     elem:$(".logo"),
     run:function () {
         this.elem.addClass('logolightSpeedIn')
             .on(animationEnd,function () {
-                $(this).add('logoshake').off();
+                $(this).addClass('logoshake').off();
             });
     }
 };
-
-
-
+////////
+//飘花//
+////////
+var snowflakeURL = [
+    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake1.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake2.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake3.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake4.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake5.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake6.png'
+];
+function snowflake() {
+    var $flakeContainer = $("#snowflake");
+    function getImageName() {
+        return snowflakeURL[[Math.floor(Math.random() * 6)]];
+    }
+    function createSnowBox() {
+        var url = getImageName();
+        return $('<div class="snowbox" />').css({
+            'width':41,
+            'height':41,
+            'position':'absolute',
+            'backgroundSize':'cover',
+            'zIndex':'10000',
+            'top':'-41px',
+            'backgroundImage':'url(' + url + ')'
+        }).addClass('snowRoll');
+    }
+    setInterval(function () {
+        var startPositionLeft = Math.random() * visualWidth - 100,
+            startOpacity = 1,
+            endPositionTop = visualHeight - 40,
+            endPositionLeft = startPositionLeft - 100 + Math.random() * 500,
+            duration = visualHeight * 10 + Math.random() * 5000;
+        var randomStart = Math.random();
+        randomStart = randomStart < 0.5 ? startOpacity : randomStart;
+        //创建一个雪花
+        var $flake = createSnowBox();
+        //设计起点位置
+        $flake.css({
+            left:startPositionLeft,
+            opacity:randomStart
+        });
+        $flakeContainer.append($flake);
+        //开始执行动画
+        $flake.transition({
+            top:endPositionTop,
+            left:endPositionLeft,
+            opacity:0.7
+        },duration,'ease-out',function () {
+            $(this).remove()
+        });
+    },200);
+}
 
 

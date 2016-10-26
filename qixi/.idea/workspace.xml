@@ -26,23 +26,25 @@
       <file leaf-file-name="qixi.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/qixi.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-377">
-              <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
+            <state relative-caret-position="550">
+              <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
               <folding>
                 <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#2;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#div#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#ul#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageA.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pageA.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/css/pageA.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,8 +53,8 @@
       <file leaf-file-name="pageC.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/pageC.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+            <state relative-caret-position="528">
+              <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -88,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="animation.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="animation.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/css/animation.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+            <state relative-caret-position="638">
+              <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -101,14 +103,14 @@
       <file leaf-file-name="QiXi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/js/QiXi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="530">
-              <caret line="268" column="44" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="44" />
+            <state relative-caret-position="1254">
+              <caret line="293" column="30" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc;n#BoyWalk#0" expanded="false" />
                 <element signature="n#!!block;n#BoyWalk#0" expanded="false" />
-                <element signature="e#545#690#0" expanded="false" />
-                <element signature="e#727#828#0" expanded="false" />
-                <element signature="e#953#1005#0" expanded="false" />
+                <element signature="e#546#691#0" expanded="false" />
+                <element signature="e#728#829#0" expanded="false" />
+                <element signature="e#954#1006#0" expanded="false" />
                 <element signature="n#!!block;n#pauseWalk#0;n#!!block;n#BoyWalk#0" expanded="false" />
                 <element signature="n#!!block;n#restoreWalk#0;n#!!block;n#BoyWalk#0" expanded="false" />
                 <element signature="n#!!block;n#slowWalk#0;n#!!block;n#BoyWalk#0" expanded="false" />
@@ -119,15 +121,17 @@
                 <element signature="n#!!block;n#talkFlower#0;n#!!block;n#BoyWalk#0" expanded="false" />
                 <element signature="n#!!block;n#walkOutShop#0;n#!!block;n#BoyWalk#0" expanded="false" />
                 <element signature="n#!!block;n#doorAction#0" expanded="false" />
-                <element signature="e#5176#5284#0" expanded="false" />
-                <element signature="e#5310#5337#0" expanded="false" />
-                <element signature="e#5379#5408#0" expanded="false" />
+                <element signature="e#5177#5285#0" expanded="false" />
+                <element signature="e#5311#5338#0" expanded="false" />
+                <element signature="e#5380#5409#0" expanded="false" />
                 <element signature="n#!!block;n#openDoor#0" expanded="false" />
                 <element signature="n#!!block;n#shutDoor#0" expanded="false" />
-                <element signature="e#5600#5786#0" expanded="false" />
+                <element signature="e#5601#5787#0" expanded="false" />
                 <element signature="n#!!block;n#scrollTo#0" expanded="false" />
-                <element signature="e#5955#6076#0" expanded="false" />
-                <element signature="e#6225#6681#0" expanded="false" />
+                <element signature="e#5956#6077#0" expanded="false" />
+                <element signature="e#6226#6682#0" expanded="false" />
+                <element signature="e#6760#6971#0" expanded="false" />
+                <element signature="n#!!block;n#getImageName#0;n#!!block;n#snowflake#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -169,10 +173,10 @@
         <option value="$PROJECT_DIR$/src/css/pageA.css" />
         <option value="$PROJECT_DIR$/src/js/swipe.js" />
         <option value="$PROJECT_DIR$/src/css/common.css" />
-        <option value="$PROJECT_DIR$/src/js/QiXi.js" />
         <option value="$PROJECT_DIR$/src/qixi.html" />
         <option value="$PROJECT_DIR$/src/css/pageC.css" />
         <option value="$PROJECT_DIR$/src/css/animation.css" />
+        <option value="$PROJECT_DIR$/src/js/QiXi.js" />
       </list>
     </option>
   </component>
@@ -186,8 +190,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="797" />
-    <option name="width" value="1118" />
+    <option name="x" value="41" />
+    <option name="width" value="1874" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -215,8 +219,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -263,7 +267,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qixi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qixi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snowflake" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -433,17 +459,21 @@
       <workItem from="1477382579514" duration="594000" />
       <workItem from="1477384710476" duration="1474000" />
       <workItem from="1477386558334" duration="1846000" />
+      <workItem from="1477442018461" duration="1723000" />
+      <workItem from="1477443762772" duration="1797000" />
+      <workItem from="1477445579921" duration="1608000" />
+      <workItem from="1477447673910" duration="79000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="91238000" />
+    <option name="totallyTimeSpent" value="96445000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="797" y="0" width="1118" height="1040" extended-state="0" />
+    <frame x="41" y="0" width="1874" height="1040" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09891107" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.085575886" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290461" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -680,18 +710,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/pageA.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/新平台项目/移动商城/coding/我的订单.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/新平台项目/移动商城/coding/商品分类.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -711,44 +740,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/新平台项目/移动商城/coding/商品分类.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/css/pageC.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="80" selection-start-line="22" selection-start-column="80" selection-end-line="22" selection-end-column="80" />
+        <state relative-caret-position="528">
+          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/qixi.html">
+    <entry file="file://$PROJECT_DIR$/src/css/animation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-377">
-          <caret line="67" column="26" selection-start-line="67" selection-start-column="26" selection-end-line="67" selection-end-column="26" />
-          <folding>
-            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#2;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#ul#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state relative-caret-position="638">
+          <caret line="29" column="33" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/js/QiXi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="530">
-          <caret line="268" column="44" selection-start-line="268" selection-start-column="28" selection-end-line="268" selection-end-column="44" />
+        <state relative-caret-position="1254">
+          <caret line="293" column="30" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc;n#BoyWalk#0" expanded="false" />
             <element signature="n#!!block;n#BoyWalk#0" expanded="false" />
-            <element signature="e#545#690#0" expanded="false" />
-            <element signature="e#727#828#0" expanded="false" />
-            <element signature="e#953#1005#0" expanded="false" />
+            <element signature="e#546#691#0" expanded="false" />
+            <element signature="e#728#829#0" expanded="false" />
+            <element signature="e#954#1006#0" expanded="false" />
             <element signature="n#!!block;n#pauseWalk#0;n#!!block;n#BoyWalk#0" expanded="false" />
             <element signature="n#!!block;n#restoreWalk#0;n#!!block;n#BoyWalk#0" expanded="false" />
             <element signature="n#!!block;n#slowWalk#0;n#!!block;n#BoyWalk#0" expanded="false" />
@@ -759,23 +776,40 @@
             <element signature="n#!!block;n#talkFlower#0;n#!!block;n#BoyWalk#0" expanded="false" />
             <element signature="n#!!block;n#walkOutShop#0;n#!!block;n#BoyWalk#0" expanded="false" />
             <element signature="n#!!block;n#doorAction#0" expanded="false" />
-            <element signature="e#5176#5284#0" expanded="false" />
-            <element signature="e#5310#5337#0" expanded="false" />
-            <element signature="e#5379#5408#0" expanded="false" />
+            <element signature="e#5177#5285#0" expanded="false" />
+            <element signature="e#5311#5338#0" expanded="false" />
+            <element signature="e#5380#5409#0" expanded="false" />
             <element signature="n#!!block;n#openDoor#0" expanded="false" />
             <element signature="n#!!block;n#shutDoor#0" expanded="false" />
-            <element signature="e#5600#5786#0" expanded="false" />
+            <element signature="e#5601#5787#0" expanded="false" />
             <element signature="n#!!block;n#scrollTo#0" expanded="false" />
-            <element signature="e#5955#6076#0" expanded="false" />
-            <element signature="e#6225#6681#0" expanded="false" />
+            <element signature="e#5956#6077#0" expanded="false" />
+            <element signature="e#6226#6682#0" expanded="false" />
+            <element signature="e#6760#6971#0" expanded="false" />
+            <element signature="n#!!block;n#getImageName#0;n#!!block;n#snowflake#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/animation.css">
+    <entry file="file://$PROJECT_DIR$/src/qixi.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
+        <state relative-caret-position="550">
+          <caret line="74" column="31" selection-start-line="74" selection-start-column="31" selection-end-line="74" selection-end-column="31" />
+          <folding>
+            <element signature="n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#2;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#0;n#div#2;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#ul#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/pageA.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
