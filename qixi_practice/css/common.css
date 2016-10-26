@@ -1,0 +1,8 @@
+*{margin:0;padding:0;}
+ul{list-style: none;}
+html,body{width:100%;height:100%;}
+#container{position:relative;width:100%;height:100%;overflow:hidden;}
+.qixi_bg li{position:relative;height:100%;float:left;}
+.qixi_bg li:first-child{background: #aee;}
+.qixi_bg li:nth-child(2){background: #a3e;}
+.qixi_bg li:last-child{background: #a32;}

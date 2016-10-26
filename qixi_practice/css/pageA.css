@@ -1,0 +1,5 @@
+.a_background_bg{position:absolute;left:0;top:0;width:100%;height:100%;}
+.a_background_bg>div{position:absolute;width:100%;}
+.a_background_top{left:0;background: url("../images/a_background_top.png") no-repeat;background-size:100% 100%;}
+.a_background_middle{left:0;background: url("../images/a_background_middle.png") no-repeat;background-size:100% 100%;}
+.a_background_bottom{left:0;background: url("../images/a_background_bottom.png") no-repeat;background-size:100% 100%;}

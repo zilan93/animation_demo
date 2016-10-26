@@ -1,0 +1,3 @@
+1,想要容器width,height为100%，需要先设置html,body宽高为100%；
+2，link不能缺少rel="stylesheet"属性；
+3, 没有child()方法，只有children()和find()方法；children()方法只能遍历子级，find()可遍历子级及以下级。
