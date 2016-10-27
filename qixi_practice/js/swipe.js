@@ -4,7 +4,7 @@
 function swipe() {
     //获取窗口的宽度
     var container = $("#container");
-    var bgObj = container.find(">");
+    var bgObj = container.children("ul");
     var bgLists = bgObj.children("li");
     var visualWidth = container.width();
     var visualHeight = container.height();

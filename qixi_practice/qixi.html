@@ -6,7 +6,6 @@
     <link href="css/common.css" type="text/css" rel="stylesheet"/>
     <link href="css/pageA.css" type="text/css" rel="stylesheet"/>
     <link href="css/pageB.css" type="text/css" rel="stylesheet"/>
-    <link href="css/pageC.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <div id="container">
@@ -18,18 +17,39 @@
                 <div class="a_background_bottom"></div>
             </div>
         </li>
-        <li></li>
+        <li>
+            <div class="b_background_bg"></div>
+            <div class="preload_background_bg"></div>
+            <div class="shop">
+                <div class="door">
+                    <div class="left_door"></div>
+                    <div class="right_door"></div>
+                </div>
+            </div>
+            <div class="lamp"></div>
+        </li>
         <li></li>
     </ul>
-    <div class="boy"></div>
+    <div class="boy walk_slow"></div>
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
 <script type="text/javascript" src="js/swipe.js"></script>
+<script type="text/javascript" src="js/qixi.js"></script>
 <script type="text/javascript">
     var container = $("#container");
     var scrollTo = swipe();
     scrollTo.scrollToFun();
+    var walk = boy();
+    walk.runWalk(5000,0.7).then(function () {
+        scrollTo.scrollToFun(container.width(),5000);
+    }).then(function () {
+        return walk.runWalk(5000,0.5);
+    }).then(function () {
+        return doorOpen();
+    }).then(function () {
+        lamp.lampBright();
+    })
 </script>
 </body>
 </html>

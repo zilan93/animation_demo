@@ -6,3 +6,14 @@ html,body{width:100%;height:100%;}
 .qixi_bg li:first-child{background: #aee;}
 .qixi_bg li:nth-child(2){background: #a3e;}
 .qixi_bg li:last-child{background: #a32;}
+.boy{position:absolute;left:0;width:150px;height:291px;background: url("../images/boy.png") no-repeat 0 -291px;}
+.walk_slow{animation:walk_slow 1.6s steps(1) infinite;}
+.stop_walk{animation-play-state: paused;}
+
+@keyframes walk_slow {
+    0%{background-position:0 -291px;}
+    25%{background-position:-150px -291px;}
+    50%{background-position:-300px -291px;}
+    75%{background-position:-600px 0;}
+    100%{background-position:0 -291px;}
+}
