@@ -60,7 +60,27 @@ function boy() {
         });
         return defer;
     }
-
+    //走出商店
+    function shutShop(runTime) {
+        var defer = $.Deferred();
+        var walkPlay = startRun({
+            "transform":"translate3d(" + displacementX + "px," + displacementY + "px,0) scale(1,1)",
+            "opacity":1
+        });
+        walkPlay.done(function () {
+            defer.resolve();
+        });
+        return defer;
+    }
+    //取花
+    function takeFlower() {
+        var defer = $.Deferred();
+        setTimeout(function () {
+            $boy.removeClass("slow_walk").addClass("walk_flower");
+            defer.resolve();
+        },1000);
+        return defer;
+    }
     return {
         distanceValue:function (x,proportion) {
             return distanceValue(x,proportion);
@@ -71,8 +91,14 @@ function boy() {
         shutWalk:function () {
             stopWalk();
         },
-        walkToShop:function () {
-            walkToShop();
+        walkToShop:function (runTime) {
+            return walkToShop(runTime);
+        },
+        shutShop:function (runTime) {
+            return shutShop(runTime);
+        },
+        takeFlower:function () {
+            takeFlower();
         }
     }
 }

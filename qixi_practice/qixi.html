@@ -49,6 +49,12 @@
         return doorOpen();
     }).then(function () {
         lamp.lampBright();
+    }).then(function(){
+        return walk.walkToShop(1000);
+    }).then(function () {
+        return walk.takeFlower();
+    }).then(function () {
+        return walk.shutShop(1000);
     })
 </script>
 </body>
