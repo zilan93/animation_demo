@@ -6,6 +6,7 @@
     <link href="css/common.css" type="text/css" rel="stylesheet"/>
     <link href="css/pageA.css" type="text/css" rel="stylesheet"/>
     <link href="css/pageB.css" type="text/css" rel="stylesheet"/>
+    <link href="css/pageC.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <div id="container">
@@ -28,7 +29,14 @@
             </div>
             <div class="lamp"></div>
         </li>
-        <li></li>
+        <li>
+            <div class="c_background_bg">
+                <div class="c_background_top"></div>
+                <div class="c_background_middle"></div>
+                <div class="c_background_bottom"></div>
+            </div>
+            <div class="girl"></div>
+        </li>
     </ul>
     <div class="boy walk_slow"></div>
 </div>
@@ -50,11 +58,28 @@
     }).then(function () {
         lamp.lampBright();
     }).then(function(){
-        return walk.walkToShop(1000);
+        return walk.walkToShop(1500);
     }).then(function () {
         return walk.takeFlower();
     }).then(function () {
-        return walk.shutShop(1000);
+        return walk.shutShop(1500);
+    }).then(function () {
+        return doorClose();
+    }).then(function () {
+        lamp.lampDark();
+    }).then(function () {
+        scrollTo.scrollToFun(container.width() * 2,5000);
+    }).then(function () {
+        return walk.runWalk(5000,0.15);
+    }).then(function () {
+        return walk.runWalk(1000,0.25,girl.girlOffsetHei() / container.height());
+    }).then(function () {
+        var disDvalue = (girl.girlOffsetWid() - $(".boy").width()) / container.width();
+        return walk.runWalk(1000,disDvalue);
+    }).then(function () {
+        walk.shutWalk();
+    }).then(function () {
+        return rotateAll();
     })
 </script>
 </body>

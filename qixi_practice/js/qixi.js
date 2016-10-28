@@ -49,8 +49,8 @@ function boy() {
         displacementX = doorOffsetWid + $door.width() / 2 - (boyOffsetWid + $boy.width() / 2);
         displacementY = doorOffsetHei + $door.height() / 2 - (boyOffsetHei + $boy.height() / 2);
         var walkPlay = startRun({
-            "transform":"translate3d(" + displacementX + "px,-" + displacementY + "px,0) scale(0.5,0.5)",
-            "opacity":"0.4"
+            "transform":"translateX(" + displacementX + "px),scale(0.1,0.1)",
+            "opacity":"0.3"
         },runTime);
         walkPlay.done(function () {
             $boy.css({
@@ -64,9 +64,9 @@ function boy() {
     function shutShop(runTime) {
         var defer = $.Deferred();
         var walkPlay = startRun({
-            "transform":"translate3d(" + displacementX + "px," + displacementY + "px,0) scale(1,1)",
+            "transform":"translateX(" + displacementX + "px) scale(1,1)",
             "opacity":1
-        });
+        },runTime);
         walkPlay.done(function () {
             defer.resolve();
         });
@@ -76,15 +76,12 @@ function boy() {
     function takeFlower() {
         var defer = $.Deferred();
         setTimeout(function () {
-            $boy.removeClass("slow_walk").addClass("walk_flower");
+            $boy.removeClass("walk_slow").addClass("walk_flower");
             defer.resolve();
         },1000);
         return defer;
     }
     return {
-        distanceValue:function (x,proportion) {
-            return distanceValue(x,proportion);
-        },
         runWalk:function (time,x,y) {
             return runWalk(time,x,y);
         },
@@ -98,7 +95,10 @@ function boy() {
             return shutShop(runTime);
         },
         takeFlower:function () {
-            takeFlower();
+            return takeFlower();
+        },
+        runRotate:function () {
+            $boy.addClass("rotate_boy");
         }
     }
 }
@@ -139,3 +139,30 @@ var lamp = {
         this.elem.removeClass("lamp_bright")
     }
 };
+//小女孩
+var girl = {
+    elem:$(".girl"),
+    girlOffsetHei:function() {
+        return this.elem.offset().top
+    },
+    girlOffsetWid:function () {
+        return this.elem.offset().left
+    },
+    runRotate:function () {
+        this.elem.addClass("rotate_gril")
+    }
+};
+//转身
+function rotateAll() {
+    var defer = $.Deferred();
+    $(".boy").css({
+        "background-position":"-150px 0"
+    });
+    setTimeout(function () {
+        girl.runRotate();
+        var walk = boy();
+        walk.runRotate();
+        defer.resolve();
+    },1000);
+    return defer;
+}
