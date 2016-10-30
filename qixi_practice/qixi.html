@@ -17,6 +17,9 @@
                 <div class="a_background_middle"></div>
                 <div class="a_background_bottom"></div>
             </div>
+            <div class="sun"></div>
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
         </li>
         <li>
             <div class="b_background_bg"></div>
@@ -28,6 +31,7 @@
                 </div>
             </div>
             <div class="lamp"></div>
+            <div class="bird"></div>
         </li>
         <li>
             <div class="c_background_bg">
@@ -35,10 +39,23 @@
                 <div class="c_background_middle"></div>
                 <div class="c_background_bottom"></div>
             </div>
+            <div class="stars">
+                <div class="start1"></div>
+                <div class="start2"></div>
+                <div class="start3"></div>
+                <div class="start4"></div>
+                <div class="start5"></div>
+                <div class="start6"></div>
+            </div>
+            <div class="">
+
+            </div>
             <div class="girl"></div>
+            <div class="logo"></div>
         </li>
     </ul>
     <div class="boy walk_slow"></div>
+    <div class="flower_box"></div>
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
@@ -67,6 +84,7 @@
         return doorClose();
     }).then(function () {
         lamp.lampDark();
+        bird.birdFly();
     }).then(function () {
         scrollTo.scrollToFun(container.width() * 2,5000);
     }).then(function () {
@@ -77,10 +95,22 @@
         var disDvalue = (girl.girlOffsetWid() - $(".boy").width()) / container.width();
         return walk.runWalk(1000,disDvalue);
     }).then(function () {
-        walk.shutWalk();
+        walk.resetOriginal();
     }).then(function () {
-        return rotateAll();
-    })
+        setTimeout(function () {
+            girl.runRotate();
+            var walk = boy();
+            walk.runRotate(function () {
+                logo.run();
+            });
+        },1000);
+    }).then(function () {
+        flowerFlow();
+    });
+    var audio1 = html5Audio(audioConfig.playURL);
+    audio1.end(function () {
+        html5Audio(audioConfig.cycleURL,true);
+    });
 </script>
 </body>
 </html>

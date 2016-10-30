@@ -1,6 +1,14 @@
 /**
  * Created by Administrator on 2016/10/27.
  */
+//animationEnd事件
+var animationEnd = (function () {
+    var explorer = navigator.userAgent;
+    if(~explorer.indexOf('webkit')) {
+        return 'webkitAnimationEnd';
+    }
+    return 'animationend';
+})();
 function boy() {
     var displacementX,displacementY;
     var visualWidth = container.width();
@@ -97,8 +105,18 @@ function boy() {
         takeFlower:function () {
             return takeFlower();
         },
-        runRotate:function () {
+        runRotate:function (callback) {
             $boy.addClass("rotate_boy");
+            if(callback) {
+                $boy.on(animationEnd,function () {
+                    callback();
+                    $(this).off();
+                })
+            }
+        },
+        resetOriginal:function() {
+            this.shutWalk();
+            $boy.removeClass("walk_flower").addClass("original_state");
         }
     }
 }
@@ -139,6 +157,16 @@ var lamp = {
         this.elem.removeClass("lamp_bright")
     }
 };
+//小鸟
+var bird = {
+    elem:$(".bird"),
+    birdFly:function () {
+        this.elem.addClass("bird_fly");
+        this.elem.transition({
+            right:"100%"
+        },5000)
+    }
+}
 //小女孩
 var girl = {
     elem:$(".girl"),
@@ -149,20 +177,73 @@ var girl = {
         return this.elem.offset().left
     },
     runRotate:function () {
-        this.elem.addClass("rotate_gril")
+        this.elem.addClass("rotate_girl")
     }
 };
-//转身
-function rotateAll() {
-    var defer = $.Deferred();
-    $(".boy").css({
-        "background-position":"-150px 0"
-    });
-    setTimeout(function () {
-        girl.runRotate();
-        var walk = boy();
-        walk.runRotate();
-        defer.resolve();
-    },1000);
-    return defer;
+//logo动画
+var logo = {
+    elem:$(".logo"),
+    run:function () {
+        this.elem.addClass("logolightSpeedIn")
+            .on(animationEnd,function () {
+                $(this).addClass("logoshake").off();
+            });
+    }
+};
+//飘花效果实现
+function flowerFlow() {
+    var flowerURLs = [
+        "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake1.png",
+        "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake2.png",
+        "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake3.png",
+        "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake4.png",
+        "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake5.png",
+        "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake6.png"
+    ];
+    var $flakeContainer = $(".flower_box");
+    function snowflake() {
+        function getImagesName() {
+            return flowerURLs[[Math.floor(Math.random() * 6)]];
+        }
+        function createSnowBox() {
+            var url = getImagesName();
+            var opacityValue = Math.random();
+            return $("<div class='flower' />").css({
+                "left": Math.random() * ($("#container").width() - 100) + "px",
+                "top":"-41px",
+                "background":"url(" + url + ") no-repeat",
+                "opacity":opacityValue >= 0.5 ? opacityValue : 1
+            }).addClass("snowRoll");
+        }
+        return createSnowBox();
+    }
+    setInterval(function () {
+        var flowerDiv = snowflake();
+        $flakeContainer.append(flowerDiv);
+        flowerDiv.transition({
+            "left":Math.random() * ($("#container").width() - 100) + "px",
+            "top":$("#container").height() - 41 + "px"
+        },5000,'ease-out',function () {
+            $(this).remove();
+        });
+    },500)
+}
+//音乐配置
+var audioConfig = {
+    enable:true,
+    playURL:'C:/users/administrator/desktop/animation_demo/qixi_practice/music/happy.wav',
+    cycleURL:'C:/users/administrator/desktop/animation_demo/qixi_practice/music/circulation.wav'
+}
+function html5Audio(url,isloop) {
+    var audio = new Audio(url);
+    audio.autoplay = true;
+    audio.loop = isloop || false;
+    audio.play();
+    return {
+        end:function (callback) {
+            audio.addEventListener('ended',function () {
+                callback();
+            },false);
+        }
+    };
 }
