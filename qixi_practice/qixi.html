@@ -47,8 +47,11 @@
                 <div class="start5"></div>
                 <div class="start6"></div>
             </div>
-            <div class="">
-
+            <div class="water">
+                <div class="water1"></div>
+                <div class="water2"></div>
+                <div class="water3"></div>
+                <div class="water4"></div>
             </div>
             <div class="girl"></div>
             <div class="logo"></div>
@@ -59,58 +62,6 @@
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
-<script type="text/javascript" src="js/swipe.js"></script>
 <script type="text/javascript" src="js/qixi.js"></script>
-<script type="text/javascript">
-    var container = $("#container");
-    var scrollTo = swipe();
-    scrollTo.scrollToFun();
-    var walk = boy();
-    walk.runWalk(5000,0.7).then(function () {
-        scrollTo.scrollToFun(container.width(),5000);
-    }).then(function () {
-        return walk.runWalk(5000,0.5);
-    }).then(function () {
-        return doorOpen();
-    }).then(function () {
-        lamp.lampBright();
-    }).then(function(){
-        return walk.walkToShop(1500);
-    }).then(function () {
-        return walk.takeFlower();
-    }).then(function () {
-        return walk.shutShop(1500);
-    }).then(function () {
-        return doorClose();
-    }).then(function () {
-        lamp.lampDark();
-        bird.birdFly();
-    }).then(function () {
-        scrollTo.scrollToFun(container.width() * 2,5000);
-    }).then(function () {
-        return walk.runWalk(5000,0.15);
-    }).then(function () {
-        return walk.runWalk(1000,0.25,girl.girlOffsetHei() / container.height());
-    }).then(function () {
-        var disDvalue = (girl.girlOffsetWid() - $(".boy").width()) / container.width();
-        return walk.runWalk(1000,disDvalue);
-    }).then(function () {
-        walk.resetOriginal();
-    }).then(function () {
-        setTimeout(function () {
-            girl.runRotate();
-            var walk = boy();
-            walk.runRotate(function () {
-                logo.run();
-            });
-        },1000);
-    }).then(function () {
-        flowerFlow();
-    });
-    var audio1 = html5Audio(audioConfig.playURL);
-    audio1.end(function () {
-        html5Audio(audioConfig.cycleURL,true);
-    });
-</script>
 </body>
 </html>
