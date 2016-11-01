@@ -44,7 +44,7 @@ Qixi = function () {
         config.layer.top = zoomTop
     }
     var instanceX;
-    var container = $(".qixi_bg");
+    var container = $("#container");
     container.css(config.layer);
     var visualWidth = container.width();
     var visualHeight = container.height();
@@ -58,7 +58,7 @@ Qixi = function () {
     };
     var pathY = function () {
         var data = getValue(".a_background_middle");
-        return data.top + data.height / 2
+        return (data.top + data.height / 2);
     }();
     //获取c图里中间背景图的偏移
     var bridgeY = function () {
@@ -83,7 +83,7 @@ Qixi = function () {
     //背景图滚动
     var swipe = Swipe(container);
     function scrollTo(time, proportionX) {
-        var distX = container * proportionX;
+        var distX = visualWidth * proportionX;
         swipe.scrollTo(distX,time)
     }
     //小女孩
@@ -129,7 +129,33 @@ Qixi = function () {
         }
     };
     var boy = BoyWalk();
-    boy.walkTo()
+    boy.walkTo(config.setTime.walkToThird,0.6).then(function () {
+        scrollTo(config.setTime.walkToMiddle,1);
+        return boy.walkTo(config.setTime.walkToMiddle,0.5)
+    }).then(function () {
+        bird.birdFly()
+    }).then(function () {
+        boy.stopWalk();
+        return BoyToShop(boy)
+    }).then(function () {
+        girl.setOffset();
+        scrollTo(config.setTime.walkToEnd,2);
+        return boy.walkTo(config.setTime.walkToEnd,0.15)
+    }).then(function () {
+        return boy.walkTo(config.setTime.walkTobridge,0.25,(bridgeY - girl.getHeight()) / visualHeight)
+    }).then(function () {
+        var proportionX = (girl.getOffset().left - boy.getWidth() - instanceX + girl.getWidth() / 5) / visualWidth;
+        return boy.walkTo(config.setTime.bridgeWalk,proportionX)
+    }).then(function () {
+        boy.resetOriginal();
+        setTimeout(function () {
+            girl.rotate();
+            boy.runRotate(function () {
+                logo.run();
+                snowflake()
+            })
+        },config.setTime.waitRotate)
+    });
     //小男孩相关动作封装
     function BoyWalk() {
         var $boy = $(".boy");
@@ -173,13 +199,11 @@ Qixi = function () {
         function walkToShop(runTime) {
             var defer = $.Deferred();
             var $door = $(".door");
-            var doorOffsetWid = $door.offset().left;
-            var doorOffsetHei = $door.offset().top;
-            var boyOffsetWid = $boy.offset().left;
-            var boyOffsetHei = $boy.offset().top;
-            displacementX = doorOffsetWid + $door.width() / 2 - (boyOffsetWid + $boy.width() / 2);
+            var doorOffsetLeft = $door.offset().left;
+            var boyOffsetLeft = $boy.offset().left;
+            instanceX = doorOffsetLeft + $door.width() / 2 - (boyOffsetLeft + $boy.width() / 2);
             var walkPlay = startRun({
-                "transform":"translateX(" + displacementX + "px),scale(0.3,0.3)",
+                "transform":"translateX(" + instanceX + "px),scale(0.3,0.3)",
                 "opacity":"0.1"
             },runTime);
             walkPlay.done(function () {
@@ -287,10 +311,10 @@ Qixi = function () {
         //开关灯动画
         var lamp = {
             elem:$(".lamp"),
-            lampBright:function() {
+            bright:function() {
                 this.elem.addClass("lamp_bright")
             },
-            lampDark:function() {
+            dark:function() {
                 this.elem.removeClass("lamp_bright")
             }
         };
@@ -307,40 +331,45 @@ Qixi = function () {
             lamp.dark();
             defer.resolve()
         });
-        return resolve();
+        return defer;
     };
     //飘花效果实现
-    function flowerFlow() {
-
-        function snowflake() {
-            var $flakeContainer = $(".flower_box");
-            function getImagesName() {
-                return flowerURLs[[Math.floor(Math.random() * 6)]];
-            }
-            function createSnowBox() {
-                var url = getImagesName();
-                var opacityValue = Math.random();
-                return $("<div class='flower' />").css({
-                    "left": Math.random() * ($("#container").width() - 100) + "px",
-                    "top":"-41px",
-                    "background":"url(" + url + ") no-repeat",
-                    "opacity":opacityValue >= 0.5 ? opacityValue : 1
-                }).addClass("snowRoll");
-            }
-            return createSnowBox();
+    function snowflake() {
+        var $flakeContainer = $(".flower_box");
+        function getImagesName() {
+            return flowerURLs[[Math.floor(Math.random() * 6)]];
+        }
+        function createSnowBox() {
+            var url = getImagesName();
+            return $("<div class='flower' />").css({
+                "top":"-41px",
+                "background":"url(" + url + ") no-repeat cover",
+            }).addClass("snowRoll");
         }
         setInterval(function () {
-            var flowerDiv = snowflake();
-            $flakeContainer.append(flowerDiv);
+            var startPositionLeft = Math.random() * visualWidth - 100,
+                startOpacity = 1;
+            var endPositionTop = visualHeight - 40,
+                endPositionLeft = startPositionLeft - 100 + Math.random() * 500,
+                duration = visualHeight * 10 + Math.random() * 5000;
+            var randomStart = Math.random();
+            randomStart = randomStart < 0.5 ? startOpacity : randomStart;
+            var $flake = createSnowBox();
+            $flake.css({
+                left:startPositionLeft,
+                opacity:randomStart
+            });
+            $flakeContainer.append($flake);
             flowerDiv.transition({
-                "left":Math.random() * ($("#container").width() - 100) + "px",
-                "top":$("#container").height() - 41 + "px"
-            },5000,'ease-out',function () {
+                "left":endPositionLeft,
+                "top":endPositionTop,
+                opacity:0.7
+            },duration,'ease-out',function () {
                 $(this).remove();
             });
-        },500)
+        },200)
     }
-//音乐配置
+    //音乐配置
     function html5Audio(url,isloop) {
         var audio = new Audio(url);
         audio.autoplay = true;
@@ -355,82 +384,53 @@ Qixi = function () {
         };
     }
 };
-function swipe() {
-    //获取窗口的宽度
-    var container = $("#container");
-    var bgObj = container.children("ul");
-    var bgLists = bgObj.children("li");
-    var visualWidth = container.width();
-    var visualHeight = container.height();
+//页面背景滚动
+function Swipe(container,options) {
+    var bgObj = container.find(":first");
+    var swipe = {};
+    var slides = bgObj.children('li');
+    var width = container.width();
+    var height = container.height();
     //设置背景元素的宽高
-    bgLists.css({
-        "width":visualWidth + "px"
-    });
     bgObj.css({
-        "width":visualWidth * bgLists.length + "px",
-        "height":visualHeight
+        "width":width * slides.length + "px",
+        "height":height + 'px'
     });
-    //背景滑动
-    function scrollTo(dis,time) {
+    $.each(slides,function (index) {
+        var slide = slides.eq(index);
+        slide.css({
+            width:width + 'px',
+            height:height +'px'
+        })
+    });
+    var isComplete = false;
+    var timer;
+    var callbacks = {};
+    container[0].addEventListener('transitionend',function () {
+        isComplete = true
+    },false);
+    function monitorOffset(element) {
+        timer = setTimeout(function () {
+            if(isComplete) {
+                clearInterval(timer);
+                return
+            }
+            callbacks.move(element.offset().left);
+            monitorOffset(element)
+        },500)
+    }
+    swipe.watch = function (eventName,callback) {
+        callbacks[eventName] = callback
+    };
+    swipe.scrollTo = function (x, speed) {
         bgObj.css({
-            "transform":"translate3d(-" + dis + "px,0,0)",
-            "transition":"all linear " + time +"ms"
+            'transition':'all ' + speed + 'ms',
+            'transform':'translate3d(-'+ x + 'px,0px,0px)'
         });
-    }
-    return {
-        scrollToFun:function (dis,time) {
-            scrollTo(dis,time);
-        }
-    }
+        return this
+    };
+    return swipe
 }
 $(function () {
-    var container = $("#container");
-    var scrollTo = swipe();
-    scrollTo.scrollToFun();
-    var walk = boy();
-    walk.runWalk(5000,0.7).then(function () {
-        scrollTo.scrollToFun(container.width(),5000);
-    }).then(function () {
-        return walk.runWalk(5000,0.5);
-    }).then(function () {
-        return doorOpen();
-    }).then(function () {
-        lamp.lampBright();
-    }).then(function(){
-        return walk.walkToShop(1500);
-    }).then(function () {
-        return walk.takeFlower();
-    }).then(function () {
-        return walk.shutShop(1500);
-    }).then(function () {
-        return doorClose();
-    }).then(function () {
-        lamp.lampDark();
-        bird.birdFly();
-    }).then(function () {
-        scrollTo.scrollToFun(container.width() * 2,5000);
-    }).then(function () {
-        return walk.runWalk(5000,0.15);
-    }).then(function () {
-        return walk.runWalk(1000,0.25,girl.girlOffsetHei() / container.height());
-    }).then(function () {
-        var disDvalue = (girl.girlOffsetWid() - $(".boy").width()) / container.width();
-        return walk.runWalk(1000,disDvalue);
-    }).then(function () {
-        walk.resetOriginal();
-    }).then(function () {
-        setTimeout(function () {
-            girl.runRotate();
-            var walk = boy();
-            walk.runRotate(function () {
-                logo.run();
-            });
-        },1000);
-    }).then(function () {
-        flowerFlow();
-    });
-    var audio1 = html5Audio(audioConfig.playURL);
-    audio1.end(function () {
-        html5Audio(audioConfig.cycleURL,true);
-    });
+   Qixi();
 });
