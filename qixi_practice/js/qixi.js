@@ -216,10 +216,10 @@ Qixi = function () {
                 pauseWalk();
             },
             walkToShop:function (runTime) {
-                return walkToShop(runTime);
+                return walkToShop.apply(null,arguments);
             },
             shutShop:function (runTime) {
-                return shutShop(runTime);
+                return shutShop.apply(null,arguments);
             },
             takeFlower:function () {
                 $boy.removeClass("walk_slow").addClass("walk_flower");
@@ -272,9 +272,10 @@ Qixi = function () {
         function doorOpen(time) {
             return doorAction("-50%","-50%",time);
         }
-        function doorClose() {
+        function doorClose(time) {
             return doorAction("0","0",time);
         }
+        //等待取花
         function takeFlower() {
             var defer = $.Deferred();
             boy.takeFlower();
@@ -283,28 +284,36 @@ Qixi = function () {
             },config.setTime.waitFlower);
             return defer
         }
-    }
-
-//灯的动作
-    var lamp = {
-        elem:$(".lamp"),
-        lampBright:function() {
-            this.elem.addClass("lamp_bright")
-        },
-        lampDark:function() {
-            this.elem.removeClass("lamp_bright")
-        }
+        //开关灯动画
+        var lamp = {
+            elem:$(".lamp"),
+            lampBright:function() {
+                this.elem.addClass("lamp_bright")
+            },
+            lampDark:function() {
+                this.elem.removeClass("lamp_bright")
+            }
+        };
+        var waitOpen = doorOpen(config.setTime.openDoorTime);
+        waitOpen.then(function () {
+            lamp.bright();
+            return boyObj.walkToShop($door,config.setTime.walkToShop)
+        }).then(function () {
+            return takeFlower();
+        }).then(function () {
+            return boyObj.shutShop(config.setTime.shutDoorTime)
+        }).then(function () {
+            doorClose(config.setTime.shutDoorTime);
+            lamp.dark();
+            defer.resolve()
+        });
+        return resolve();
     };
-
-
-
-//飘花效果实现
+    //飘花效果实现
     function flowerFlow() {
-        var flowerURLs = [
 
-        ];
-        var $flakeContainer = $(".flower_box");
         function snowflake() {
+            var $flakeContainer = $(".flower_box");
             function getImagesName() {
                 return flowerURLs[[Math.floor(Math.random() * 6)]];
             }
