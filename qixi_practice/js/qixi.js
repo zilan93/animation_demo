@@ -3,6 +3,7 @@ Qixi = function () {
     var config = {
         keepZoomRatio:false,
         layer:{
+            "position":"absolute",
             'width':'100%',
             'height':'100%',
             'top':0,
@@ -60,6 +61,7 @@ Qixi = function () {
         var data = getValue(".a_background_middle");
         return (data.top + data.height / 2);
     }();
+    console.log(pathY);
     //获取c图里中间背景图的偏移
     var bridgeY = function () {
         var data = getValue(".c_background_middle");
@@ -133,7 +135,7 @@ Qixi = function () {
         scrollTo(config.setTime.walkToMiddle,1);
         return boy.walkTo(config.setTime.walkToMiddle,0.5)
     }).then(function () {
-        bird.birdFly()
+        bird.birdFly();
     }).then(function () {
         boy.stopWalk();
         return BoyToShop(boy)
@@ -175,7 +177,7 @@ Qixi = function () {
         }
         //开始走路
         function slowWalk() {
-            $boy.addClass("slowWalk")
+            $boy.addClass("walk_slow")
         }
         //走到指定位置
         function startRun(option,time) {
@@ -239,7 +241,7 @@ Qixi = function () {
             stopWalk:function () {
                 pauseWalk();
             },
-            walkToShop:function (runTime) {
+            toShop:function (runTime) {
                 return walkToShop.apply(null,arguments);
             },
             shutShop:function (runTime) {
@@ -302,7 +304,7 @@ Qixi = function () {
         //等待取花
         function takeFlower() {
             var defer = $.Deferred();
-            boy.takeFlower();
+            boyObj.takeFlower();
             setTimeout(function () {
                 defer.resolve()
             },config.setTime.waitFlower);
@@ -321,7 +323,7 @@ Qixi = function () {
         var waitOpen = doorOpen(config.setTime.openDoorTime);
         waitOpen.then(function () {
             lamp.bright();
-            return boyObj.walkToShop($door,config.setTime.walkToShop)
+            return boyObj.toShop($door,config.setTime.walkToShop);
         }).then(function () {
             return takeFlower();
         }).then(function () {
@@ -396,32 +398,12 @@ function Swipe(container,options) {
         "width":width * slides.length + "px",
         "height":height + 'px'
     });
-    $.each(slides,function (index) {
-        var slide = slides.eq(index);
-        slide.css({
+    $.each(slides,function (index,ele) {
+        $(ele).css({
             width:width + 'px',
             height:height +'px'
         })
     });
-    var isComplete = false;
-    var timer;
-    var callbacks = {};
-    container[0].addEventListener('transitionend',function () {
-        isComplete = true
-    },false);
-    function monitorOffset(element) {
-        timer = setTimeout(function () {
-            if(isComplete) {
-                clearInterval(timer);
-                return
-            }
-            callbacks.move(element.offset().left);
-            monitorOffset(element)
-        },500)
-    }
-    swipe.watch = function (eventName,callback) {
-        callbacks[eventName] = callback
-    };
     swipe.scrollTo = function (x, speed) {
         bgObj.css({
             'transition':'all ' + speed + 'ms',
