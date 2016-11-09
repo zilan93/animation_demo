@@ -17,67 +17,6 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="js.js" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/js/js.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="420">
-                    <caret line="347" column="64" selection-start-line="347" selection-start-column="64" selection-end-line="347" selection-end-column="64" />
-                    <folding>
-                      <element signature="e#88#202#0" expanded="false" />
-                      <element signature="e#219#398#0" expanded="false" />
-                      <element signature="e#1246#1353#0" expanded="false" />
-                      <element signature="e#1383#1665#0" expanded="false" />
-                      <element signature="e#1876#2028#0" expanded="false" />
-                      <element signature="e#2058#2160#0" expanded="false" />
-                      <element signature="e#2194#2278#0" expanded="false" />
-                      <element signature="e#2318#2492#0" expanded="false" />
-                      <element signature="e#2758#2848#0" expanded="false" />
-                      <element signature="e#2864#3401#0" expanded="false" />
-                      <element signature="e#7169#7260#0" expanded="false" />
-                      <element signature="e#7276#8624#0" expanded="false" />
-                      <element signature="e#8036#8330#0" expanded="false" />
-                      <element signature="e#8669#10576#0" expanded="false" />
-                      <element signature="e#8866#9355#0" expanded="false" />
-                      <element signature="e#9388#9451#0" expanded="false" />
-                      <element signature="e#9484#9544#0" expanded="false" />
-                      <element signature="e#9813#10060#0" expanded="false" />
-                      <element signature="e#12507#12521#0" expanded="false" />
-                      <element signature="n#!!block;n#Swipe#0" expanded="false" />
-                      <element signature="e#13169#13202#0" expanded="false" />
-                      <element signature="n#!!block;n#monitorOffet#0;n#!!block;n#Swipe#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="QiXi.js" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/../qixi/src/js/QiXi.js">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="896">
-                    <caret line="318" column="31" selection-start-line="318" selection-start-column="31" selection-end-line="318" selection-end-column="31" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="qixi_practice" />
@@ -208,7 +147,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="818" />
+    <option name="x" value="449" />
+    <option name="y" value="482" />
     <option name="width" value="1102" />
     <option name="height" value="1040" />
   </component>
@@ -489,17 +429,18 @@
       <workItem from="1478661232168" duration="1849000" />
       <workItem from="1478663107834" duration="992000" />
       <workItem from="1478669129918" duration="599000" />
+      <workItem from="1478671781211" duration="1252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="143389000" />
+    <option name="totallyTimeSpent" value="144641000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="818" y="0" width="1102" height="1040" extended-state="0" />
+    <frame x="449" y="482" width="1102" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.160221" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.160221" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32913387" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
