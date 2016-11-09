@@ -1,9 +1,7 @@
-Qixi = function () {
+var Qixi = function () {
     //参数配置
     var config = {
-        keepZoomRatio:false,
         layer:{
-            "position":"absolute",
             'width':'100%',
             'height':'100%',
             'top':0,
@@ -11,8 +9,8 @@ Qixi = function () {
         },
         audio:{
             enable:true,
-            playURL:'C:/users/administrator/desktop/animation_demo/qixi_practice/music/happy.wav',
-            cycleURL:'C:/users/administrator/desktop/animation_demo/qixi_practice/music/circulation.wav'
+            playURL:'../music/happy.wav',
+            cycleURL:'../music/circulation.wav'
         },
         setTime:{
             walkToThird: 6000,
@@ -28,22 +26,14 @@ Qixi = function () {
             waitFlower: 800
         },
         snowflakeURL:[
-            "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake1.png",
-            "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake2.png",
-            "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake3.png",
-            "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake4.png",
-            "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake5.png",
-            "c:/Users/administrator/desktop/animation_demo/qixi_practice/images/snowflake6.png"
+            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake1.png",
+            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake2.png",
+            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake3.png",
+            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake4.png",
+            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake5.png",
+            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake6.png"
         ]
     };
-    if(config.keepZoomRatio) {
-        var proportionY = 900 / 1440;
-        var screenHeight = $(document).height();
-        var zoomHeight = screenHeight * proportionY;
-        var zoomTop = (screenHeight - zoomHeight) /2;
-        config.layer.height = zoomHeight;
-        config.layer.top = zoomTop
-    }
     var instanceX;
     var container = $("#container");
     container.css(config.layer);
@@ -61,7 +51,6 @@ Qixi = function () {
         var data = getValue(".a_background_middle");
         return (data.top + data.height / 2);
     }();
-    console.log(pathY);
     //获取c图里中间背景图的偏移
     var bridgeY = function () {
         var data = getValue(".c_background_middle");
@@ -106,7 +95,7 @@ Qixi = function () {
         getOffset:function () {
             return this.elem.offset();
         },
-        runRotate:function () {
+        rotate:function () {
             this.elem.addClass("rotate_girl")
         }
     };
@@ -163,7 +152,6 @@ Qixi = function () {
         var $boy = $(".boy");
         var boyWidth = $boy.width();
         var boyHeight = $boy.height();
-        var displacementX;
         $boy.css({
             "top":pathY - boyHeight + 25 + "px"
         });
@@ -182,6 +170,7 @@ Qixi = function () {
         //走到指定位置
         function startRun(option,time) {
             var dfdPlay = $.Deferred();
+            restoreWalk();
             $boy.transition(option,time,"linear",function () {
                 dfdPlay.resolve();
             });
@@ -198,7 +187,7 @@ Qixi = function () {
             return d1;
         }
         //走进商店
-        function walkToShop(runTime) {
+        function walkToShop() {
             var defer = $.Deferred();
             var $door = $(".door");
             var doorOffsetLeft = $door.offset().left;
@@ -207,7 +196,7 @@ Qixi = function () {
             var walkPlay = startRun({
                 "transform":"translateX(" + instanceX + "px),scale(0.3,0.3)",
                 "opacity":"0.1"
-            },runTime);
+            },2000);
             walkPlay.done(function () {
                 $boy.css({
                     opacity:0
@@ -220,7 +209,7 @@ Qixi = function () {
         function shutShop(runTime) {
             var defer = $.Deferred();
             var walkPlay = startRun({
-                "transform":"translateX(" + displacementX + "px) scale(1,1)",
+                "transform":"translateX(" + instanceX + "px) scale(1,1)",
                 "opacity":1
             },runTime);
             walkPlay.done(function () {
@@ -241,10 +230,10 @@ Qixi = function () {
             stopWalk:function () {
                 pauseWalk();
             },
-            toShop:function (runTime) {
+            toShop:function () {
                 return walkToShop.apply(null,arguments);
             },
-            shutShop:function (runTime) {
+            outShop:function () {
                 return shutShop.apply(null,arguments);
             },
             takeFlower:function () {
@@ -261,8 +250,8 @@ Qixi = function () {
                 }
             },
             resetOriginal:function() {
-                this.pauseWalk();//这里为什么用this
-                $boy.removeClass("walk_flower").addClass("original_state");
+                this.stopWalk();//这里为什么用this
+                $boy.removeClass("walk_flower walk_slow").addClass("original_state");
             },
             getWidth:function () {
                 return $boy.width()
@@ -327,7 +316,7 @@ Qixi = function () {
         }).then(function () {
             return takeFlower();
         }).then(function () {
-            return boyObj.shutShop(config.setTime.shutDoorTime)
+            return boyObj.outShop(config.setTime.shutDoorTime)
         }).then(function () {
             doorClose(config.setTime.shutDoorTime);
             lamp.dark();
@@ -339,13 +328,14 @@ Qixi = function () {
     function snowflake() {
         var $flakeContainer = $(".flower_box");
         function getImagesName() {
-            return flowerURLs[[Math.floor(Math.random() * 6)]];
+            return config.snowflakeURL[[Math.floor(Math.random() * 6)]];
         }
         function createSnowBox() {
             var url = getImagesName();
             return $("<div class='flower' />").css({
                 "top":"-41px",
-                "background":"url(" + url + ") no-repeat cover",
+                "backgroundImage":"url(' + url + ')",
+                "background-size":"cover"
             }).addClass("snowRoll");
         }
         setInterval(function () {
@@ -362,9 +352,9 @@ Qixi = function () {
                 opacity:randomStart
             });
             $flakeContainer.append($flake);
-            flowerDiv.transition({
-                "left":endPositionLeft,
-                "top":endPositionTop,
+            $flake.transition({
+                left:endPositionLeft,
+                top:endPositionTop,
                 opacity:0.7
             },duration,'ease-out',function () {
                 $(this).remove();
@@ -395,7 +385,7 @@ function Swipe(container,options) {
     var height = container.height();
     //设置背景元素的宽高
     bgObj.css({
-        "width":width * slides.length + "px",
+        "width":width * slides.length + 'px',
         "height":height + 'px'
     });
     $.each(slides,function (index,ele) {
@@ -412,7 +402,7 @@ function Swipe(container,options) {
         return this
     };
     return swipe
-}
+};
 $(function () {
    Qixi();
 });
