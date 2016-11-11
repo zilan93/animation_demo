@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    <title>圣诞主题</title>
+    <style rel="stylesheet" type="text/css">
+        p{font-size:1rem;}
+        .bird{position:absolute;right:0;top:10%;min-width:4rem;min-height:2rem;background: url("images/bird.png");background-size:300% 100%;}
+        .birdFly{animation:birdFly 500ms steps(3) infinite;}
+        @keyframes birdFly {
+            0% {background-position:0 0;}
+            100% {background-position:-300% 0;}
+        }
+    </style>
+</head>
+<body>
+<p>尺寸增加后，精灵图正常</p>
+<div class="bird birdFly"></div>
+<button class="btn">点击</button>
+<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
+<script type="text/javascript">
+    var docEl = document.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                docEl.style.fontSize = 20 * (docEl.clientWidth / 320) + 'px';
+            };
+    window.addEventListener(resizeEvt,recalc,false);
+    document.addEventListener('DOMContentLoaded',recalc,false);
+
+    /***小鸟动画***/
+    $(".btn").click(function () {
+        $(".bird").transition({
+            "right":"100%"
+        },15000,'linear')
+    })
+</script>
+</body>
+</html>
