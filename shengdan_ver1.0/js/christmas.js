@@ -26,14 +26,14 @@ var Christmas = function () {
     var $pageC = $(".page-c");
 
     //构建第一个场景页面对象
-    new pageA($pageA);
+    var pageAFun = new pageA($pageA);
 
     //观察者
     var observer = new Observer();
     //A场景页面
-    new pageA(function () {
+    pageAFun.run(function () {
         observer.publish("completeA");
-    })
+    });
     //进入场景B
     observer.subscribe("pageB",function () {
         new pageB(function () {
@@ -44,12 +44,13 @@ var Christmas = function () {
     observer.subscribe("pageC",function () {
         new pageC()
     })
-    /*//页面A-B切换
+    //页面A-B切换
     observer.subscribe("completeA",function () {
         changePage($pageA,"effect-out",function () {
             observer.publish("pageB")
         })
-    })
+    });
+    /*
     //页面B-C切换
     observer.subscribe("completeB",function () {
         changePage($pageC,"effect-in",function () {

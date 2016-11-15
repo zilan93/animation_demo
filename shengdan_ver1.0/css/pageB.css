@@ -1,0 +1,21 @@
+.chri_boy{position:absolute;width:3.89rem;height:4.52rem;background: url("../images/b/boy.png") left top;background-size:1500% 100%;}
+.chri_boy_walk{animation: chri_boy_walk 1.5s steps(1) infinite;}
+.chri_boy_gift{animation: chri_boy_gift 1s steps(1) both;}
+.chri_boy_restore{}
+@keyframes chri_boy_walk {
+    0% {background-position:0 0;}
+    25% {background-position:-100% 0;}
+    50% {background-position:-200% 0;}
+    75% {background-position:-300% 0;}
+    100% {background-position:0 0;}
+}
+@keyframes chri_boy_gift {
+    0% {background-position:-400% 0;}
+    50% {background-position:-500% 0;}
+    100% {background-position:-600% 0;}
+}
+ @keyframes chri_boy_restore {
+     0% {background-position:-700% 0;}
+     50% {background-position:-800% 0;}
+     100% {background-position:-900% 0;}
+ }

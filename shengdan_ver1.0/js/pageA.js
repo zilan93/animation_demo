@@ -4,8 +4,33 @@
 function pageA(element) {
     this.$root = element;
     this.$boy = element.find(".boy");
+    this.$window = element.find(".window");
+    this.$leftWin = this.$window.find(".window_left");
+    this.$rightWin = this.$window.find(".window_right");
     this.run();
 }
+/**
+ * 开窗
+ * @return {[type]} [description]
+ */
+pageA.prototype.openWindow = function (callback) {
+    var count = 1;
+    var complete = function () {
+        ++count;
+        if(count === 2) {
+            callback && callback();
+        }
+    }
+    var bind = function (data) {
+        data.one("transitionend webkitTransitionEnd",function (event) {
+            data.removeClass("window_animation");
+            complete();
+        })
+    }
+    bind(this.$leftWin.addClass("window_animation").addClass("hover"));
+    bind(this.$rightWin.addClass("window_animation").addClass("hover"));
+}
+
 /**
  * 运行下一个动画
  * @return {Function} [description]
@@ -60,6 +85,7 @@ pageA.prototype.run = function (callback) {
             })
         }).then(function () {
             that.stopWalk();
+            that.openWindow(callback);
         })
 };
 
