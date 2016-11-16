@@ -26,8 +26,8 @@
       <file leaf-file-name="shengdan.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shengdan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="45" />
+            <state relative-caret-position="552">
+              <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
               <folding>
                 <element signature="n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
@@ -38,15 +38,52 @@
       <file leaf-file-name="christmas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/christmas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
+            <state relative-caret-position="624">
+              <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
               <folding>
-                <element signature="e#975#1084#0" expanded="false" />
                 <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
-                <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
-                <element signature="e#2179#2192#0" expanded="false" />
-                <element signature="e#2351#2570#0" expanded="false" />
+                <element signature="e#2159#2172#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="工程团队.html" pinned="false" current-in-tab="false">
+        <entry file="file://F:/新平台项目/移动商城/coding/工程团队.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="首页.html" pinned="false" current-in-tab="false">
+        <entry file="file://F:/新平台项目/移动商城/coding/首页.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="我的订单.html" pinned="false" current-in-tab="true">
+        <entry file="file://F:/新平台项目/移动商城/coding/我的订单.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="600">
+              <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="m_weui.css" pinned="false" current-in-tab="false">
+        <entry file="file://F:/新平台项目/移动商城/coding/css/m_weui.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1248">
+              <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -54,20 +91,50 @@
       <file leaf-file-name="pageB.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/pageB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            <state relative-caret-position="1680">
+              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
               <folding>
                 <element signature="n#!!doc;n#pageB#0" expanded="false" />
+                <element signature="e#1262#1286#0" expanded="false" />
+                <element signature="e#1308#2457#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageB.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="carousel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/carousel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3888">
+              <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="n#!!doc;n#createStr#0;n#!!block;n#Carousel#0" expanded="false" />
+                <element signature="n#!!block;n#render#0;n#!!block;n#Carousel#0" expanded="false" />
+                <element signature="e#2781#2951#0" expanded="false" />
+                <marker date="1479280982880" expanded="true" signature="1552:1623" ph="..." />
+                <marker date="1479280982880" expanded="true" signature="1664:1687" ph="..." />
+                <marker date="1479280982880" expanded="true" signature="4119:4175" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageA.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pageA.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1152">
+              <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageB.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/pageB.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="456">
-              <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+            <state relative-caret-position="624">
+              <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -78,9 +145,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -95,13 +162,17 @@
         <option value="$PROJECT_DIR$/js/shengdan.js" />
         <option value="$PROJECT_DIR$/css/common.css" />
         <option value="$PROJECT_DIR$/js/observer.js" />
-        <option value="$PROJECT_DIR$/js/pageB.js" />
         <option value="$PROJECT_DIR$/js/pageC.js" />
         <option value="$PROJECT_DIR$/css/pageA.css" />
         <option value="$PROJECT_DIR$/js/pageA.js" />
-        <option value="$PROJECT_DIR$/js/christmas.js" />
-        <option value="$PROJECT_DIR$/shengdan.html" />
         <option value="$PROJECT_DIR$/css/pageB.css" />
+        <option value="$PROJECT_DIR$/shengdan.html" />
+        <option value="$PROJECT_DIR$/旋转木马.html" />
+        <option value="$PROJECT_DIR$/js/pageB.js" />
+        <option value="$PROJECT_DIR$/js/carousel.js" />
+        <option value="$PROJECT_DIR$/js/christmas.js" />
+        <option value="F:/新平台项目/移动商城/coding/我的订单.html" />
+        <option value="F:/新平台项目/移动商城/coding/css/m_weui.css" />
       </list>
     </option>
   </component>
@@ -112,9 +183,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="184" />
-    <option name="width" value="1736" />
-    <option name="height" value="1040" />
+    <option name="x" value="582" />
+    <option name="width" value="1670" />
+    <option name="height" value="1071" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -141,8 +212,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -185,12 +254,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shengdan_ver1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shengdan_ver1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -317,17 +402,30 @@
       <workItem from="1479198002022" duration="1859000" />
       <workItem from="1479199878427" duration="1942000" />
       <workItem from="1479201842688" duration="964000" />
+      <workItem from="1479257304456" duration="1065000" />
+      <workItem from="1479259122366" duration="1859000" />
+      <workItem from="1479260998645" duration="1773000" />
+      <workItem from="1479262817869" duration="1799000" />
+      <workItem from="1479264639161" duration="1798000" />
+      <workItem from="1479266464141" duration="2904000" />
+      <workItem from="1479270818055" duration="1839000" />
+      <workItem from="1479274316571" duration="1803000" />
+      <workItem from="1479276140230" duration="2469000" />
+      <workItem from="1479278774003" duration="1817000" />
+      <workItem from="1479280609105" duration="1803000" />
+      <workItem from="1479282429508" duration="1832000" />
+      <workItem from="1479284281887" duration="953000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68150000" />
+    <option name="totallyTimeSpent" value="91864000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="184" y="0" width="1736" height="1040" extended-state="0" />
+    <frame x="582" y="0" width="1670" height="1071" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08895349" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13663845" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -363,49 +461,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chapter1.6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../20161110大宋越野跑报名专题/pc专题页面/index.html" />
-    <entry file="file://$PROJECT_DIR$/chapter1.1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../qixi_practice/qixi.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1488">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter1.3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="21" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter1.6.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chapter1.1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../qixi_practice/qixi.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1488">
@@ -664,55 +719,116 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/pageB.js">
+    <entry file="file://$PROJECT_DIR$/旋转木马.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="1" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!doc;n#pageB#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="686">
+          <caret line="53" column="6" selection-start-line="53" selection-start-column="6" selection-end-line="53" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/christmas.js">
+    <entry file="file://$PROJECT_DIR$/../../566a38f000016f0900000000.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
-          <caret line="44" column="19" selection-start-line="44" selection-start-column="19" selection-end-line="44" selection-end-column="19" />
-          <folding>
-            <element signature="e#975#1084#0" expanded="false" />
-            <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
-            <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
-            <element signature="e#2179#2192#0" expanded="false" />
-            <element signature="e#2351#2570#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pageA.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+        <state relative-caret-position="-8066">
+          <caret line="0" column="7810" selection-start-line="0" selection-start-column="7807" selection-end-line="0" selection-end-column="7810" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/shengdan.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="45" />
+        <state relative-caret-position="552">
+          <caret line="35" column="57" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
           <folding>
             <element signature="n#section#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/christmas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="30" column="34" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="34" />
+          <folding>
+            <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
+            <element signature="e#2159#2172#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/新平台项目/移动商城/coding/工程团队.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/新平台项目/移动商城/coding/首页.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/新平台项目/移动商城/coding/我的订单.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/新平台项目/移动商城/coding/css/m_weui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pageB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1680">
+          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+          <folding>
+            <element signature="n#!!doc;n#pageB#0" expanded="false" />
+            <element signature="e#1262#1286#0" expanded="false" />
+            <element signature="e#1308#2457#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/carousel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3888">
+          <caret line="180" column="0" selection-start-line="180" selection-start-column="0" selection-end-line="180" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc;n#createStr#0;n#!!block;n#Carousel#0" expanded="false" />
+            <element signature="n#!!block;n#render#0;n#!!block;n#Carousel#0" expanded="false" />
+            <element signature="e#2781#2951#0" expanded="false" />
+            <marker date="1479280982880" expanded="true" signature="1552:1623" ph="..." />
+            <marker date="1479280982880" expanded="true" signature="1664:1687" ph="..." />
+            <marker date="1479280982880" expanded="true" signature="4119:4175" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pageA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1152">
+          <caret line="48" column="38" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/pageB.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+        <state relative-caret-position="624">
+          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding />
         </state>
       </provider>

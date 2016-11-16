@@ -27,7 +27,6 @@ var Christmas = function () {
 
     //构建第一个场景页面对象
     var pageAFun = new pageA($pageA);
-
     //观察者
     var observer = new Observer();
     //A场景页面
@@ -36,27 +35,25 @@ var Christmas = function () {
     });
     //进入场景B
     observer.subscribe("pageB",function () {
-        new pageB(function () {
-            observer.publish("completeB");
-        })
-    })
+        new pageB($pageB);
+        observer.publish("completeB");
+    });
     //进入场景C
     observer.subscribe("pageC",function () {
-        new pageC()
-    })
+        new pageC($pageC);
+    });
     //页面A-B切换
     observer.subscribe("completeA",function () {
         changePage($pageA,"effect-out",function () {
             observer.publish("pageB")
         })
     });
-    /*
     //页面B-C切换
     observer.subscribe("completeB",function () {
         changePage($pageC,"effect-in",function () {
             observer.publish("page-c")
         })
-    })*/
+    });
     /*//切换页面
     $("#choose").on("change",function (e) {
         var pageName = e.target.value;

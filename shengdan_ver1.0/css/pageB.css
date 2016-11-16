@@ -1,7 +1,19 @@
-.chri_boy{position:absolute;width:3.89rem;height:4.52rem;background: url("../images/b/boy.png") left top;background-size:1500% 100%;}
-.chri_boy_walk{animation: chri_boy_walk 1.5s steps(1) infinite;}
-.chri_boy_gift{animation: chri_boy_gift 1s steps(1) both;}
-.chri_boy_restore{}
+.chri_boy,.chri_boy_head{position:absolute;width:3.89rem;height:4.52rem;background: url("../images/b/boy.png") left top;background-size:1500% 100%;}
+.girl{position:absolute;width:3.5rem;height:4.06rem;left:1rem;top:3.2rem;background: url("../images/b/girl.png");background-size: 2100% 100%;}
+.chri_boy{right:-3.5rem;top:4rem;}
+.chri_boy_walk{animation: chri_boy_walk 1s steps(1) infinite;}
+.chri_boy_stop{background-position:-400% 0;}
+.chri_boy_gift{animation: chri_boy_gift 1s 1s steps(1) both;}
+.boy_strip_1{background-position:-800% 0;}
+.boy_strip_2{background-position:-900% 0;}
+.boy_strip_3{background-position:-1000% 0;}
+.chri_boy_head{display:none;right:4.5rem;top:4rem;background-position:-1400% top;}
+.chri_boy_walk_to_girl{animation: chri_boy_walk_to_girl 1s steps(1) both;}
+.girl_stand{animation: girl_stand 500ms steps(5) forwards;}
+.girl_walk{animation: girl_walk 1.5s steps(4,start) infinite;}
+.girl_stop{background-position:-1000% 0;}
+.girl_hangup{animation: girl_hangup 1s steps(1) forwards;}
+.girl_hug{animation: girl_hug 1s steps(2) forwards;}
 @keyframes chri_boy_walk {
     0% {background-position:0 0;}
     25% {background-position:-100% 0;}
@@ -14,8 +26,25 @@
     50% {background-position:-500% 0;}
     100% {background-position:-600% 0;}
 }
- @keyframes chri_boy_restore {
-     0% {background-position:-700% 0;}
-     50% {background-position:-800% 0;}
-     100% {background-position:-900% 0;}
+@keyframes chri_boy_walk_to_girl {
+    0% {background-position:-1000% 0;}
+    35% {background-position:-1100% 0;}
+    70% {background-position:-1200% 0;}
+    100% {background-position:-1300% 0;}
+}
+@keyframes girl_stand {
+    0% {background-position:0 0;}
+    100%{background-position:-500% 0;}
+}
+@keyframes girl_walk {
+    0% {background-position:-500% 0;}
+    100%{background-position:-900% 0;}
+}
+@keyframes girl_hangup {
+     0% {background-position:-1100% 0;}
+     100%{background-position:-1200% 0;}
  }
+@keyframes girl_hug {
+    0% {background-position:-1800% 0;}
+    100%{background-position:-2000% 0;}
+}
