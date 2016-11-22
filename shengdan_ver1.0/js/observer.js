@@ -1,7 +1,4 @@
 /**
- * Created by Administrator on 2016/11/11.
- */
-/**
  *事件
  * 观察者模式
  */
@@ -43,7 +40,6 @@ var Observer = (function (slice) {
         }
         return this;
     }
-
     function trigger(event) {
         var events = this.events,
             i, args, falg;
@@ -56,7 +52,6 @@ var Observer = (function (slice) {
         }
         return falg; //修正带返回
     }
-
     return function() {
         this.on =
             this.subscribe = bind;
