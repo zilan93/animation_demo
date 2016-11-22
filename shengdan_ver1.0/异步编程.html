@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>异步编程</title>
+    <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+</head>
+<body>
+显示结果：<p class="container"></p>
+<button>嵌套回调异步</button>
+<button>$.Deffered异步</button>
+<script type="text/javascript">
+    //嵌套异步
+    $("button:first").on("click",function () {
+        //模拟异步A
+        function A(callback) {
+            setTimeout(function () {
+                callback(1)
+            },500)
+        }
+        //模拟异步B
+        function B(callback,value) {
+            setTimeout(function () {
+                callback(value + 2)
+            },1000)
+        }
+        A(function (data1) {
+            B(function (data2) {
+                $(".container").html("异步嵌套：" + data2)
+            },data1)
+        })
+    })
+
+    //$.Deferred异步
+    $("button:last").on("click",function () {
+        function C() {
+            var dtd = $.Deferred();
+            setTimeout(function () {
+                dtd.resolve(3)
+            },500);
+            return dtd;
+        }
+        function E(value) {
+            var dtd = $.Deferred();
+            setTimeout(function () {
+                dtd.resolve(value + 5)
+            },1000);
+            return dtd;
+        }
+        C().then(function (data) {
+            return E(data);
+        }).then(function (data) {
+            $(".container").html("Deferred异步处理：" + data)
+        })
+    })
+</script>
+</body>
+</html>
