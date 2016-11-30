@@ -12,9 +12,9 @@ function pageB(element) {
         //走路
         walk:function () {
             var dfd = $.Deferred();
-            $boy.transition({
+            $boy.addClass("chri_boy_walk").transition({
                 "right":"4.5rem"
-            },"linear","15000ms",function () {
+            },"15000ms","linear",function () {
                 dfd.resolve();
             });
             return dfd;

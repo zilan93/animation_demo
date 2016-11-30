@@ -5,7 +5,7 @@
 var Observer = (function (slice) {
     function bind(event,fn) {
         var events = this.events = this.events || {},
-            parts = event.split(/\s+/),
+            parts = event.split(/\s+/),//将字符串按一个或多个空格进行分割成数组
             i = 0,
             num = parts.length,
             part;

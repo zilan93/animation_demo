@@ -25,10 +25,10 @@ var Christmas = function () {
     var $pageB = $(".page-b");
     var $pageC = $(".page-c");
 
-    //构建第一个场景页面对象
-    var pageAFun = new pageA($pageA);
     //观察者
     var observer = new Observer();
+    //构建第一个场景页面对象
+    var pageAFun = new pageA($pageA);
     //A场景页面
     pageAFun.run(function () {
         observer.publish("completeA");
@@ -36,7 +36,7 @@ var Christmas = function () {
     //进入场景B
     observer.subscribe("pageB",function () {
         new pageB($pageB);
-        observer.publish("completeB");
+        //observer.publish("completeB");
     });
     //进入场景C
     observer.subscribe("pageC",function () {
