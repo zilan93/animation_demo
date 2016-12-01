@@ -1,0 +1,1 @@
+1,在写插件的时候，var plugin = {}的写法和var plugin = function() {}两种写法，该用哪一种？？

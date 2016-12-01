@@ -14,7 +14,7 @@ function pageB(element) {
             var dfd = $.Deferred();
             $boy.addClass("chri_boy_walk").transition({
                 "right":"4.5rem"
-            },"15000ms","linear",function () {
+            },"15000","linear",function () {
                 dfd.resolve();
             });
             return dfd;
@@ -85,7 +85,7 @@ function pageB(element) {
     };
     /**
      * 旋转木马
-     */
+
     var $carousel = element.find("#carousel");
     var carousel = new Carousel($carousel,{
         imgUrls:[
@@ -93,7 +93,7 @@ function pageB(element) {
             "images/carousel/2.png",
             "images/carousel/3.png"
         ]
-    });
+    });*/
     boyAction.walk()
         .then(function () {
             boyAction.stopWalk();
@@ -104,7 +104,6 @@ function pageB(element) {
             girlAction.girlStopWalk();
             return boyAction.unwrapp();
         }).then(function () {
-            carousel.run(1);
             return girlAction.girlHangUp();
         })
         .then(function () {

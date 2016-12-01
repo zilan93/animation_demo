@@ -36,11 +36,11 @@ var Christmas = function () {
     //进入场景B
     observer.subscribe("pageB",function () {
         new pageB($pageB);
-        //observer.publish("completeB");
+        observer.publish("completeB");
     });
     //进入场景C
     observer.subscribe("pageC",function () {
-        new pageC($pageC);
+        new pageC();
     });
     //页面A-B切换
     observer.subscribe("completeA",function () {
@@ -51,7 +51,7 @@ var Christmas = function () {
     //页面B-C切换
     observer.subscribe("completeB",function () {
         changePage($pageC,"effect-in",function () {
-            observer.publish("page-c")
+            observer.publish("pageC")
         })
     });
     /*//切换页面

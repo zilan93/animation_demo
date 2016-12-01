@@ -9,8 +9,8 @@ var Qixi = function () {
         },
         audio:{
             enable:true,
-            playURL:'../music/happy.wav',
-            cycleURL:'../music/circulation.wav'
+            playURL:'music/happy.wav',
+            cycleURL:'music/circulation.wav'
         },
         setTime:{
             walkToThird: 6000,
@@ -26,12 +26,12 @@ var Qixi = function () {
             waitFlower: 800
         },
         snowflakeURL:[
-            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake1.png",
-            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake2.png",
-            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake3.png",
-            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake4.png",
-            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake5.png",
-            "file:///C:/Users/Administrator/Desktop/animation_demo/qixi_practice/images/snowflake6.png"
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake1.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake2.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake3.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake4.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake5.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake6.png'
         ]
     };
     var instanceX;
@@ -402,7 +402,7 @@ function Swipe(container,options) {
         return this
     };
     return swipe
-};
+}
 $(function () {
    Qixi();
 });

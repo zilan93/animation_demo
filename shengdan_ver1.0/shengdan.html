@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/pageA.css" />
     <link rel="stylesheet" href="css/pageB.css" />
+    <link rel="stylesheet" href="css/pageC.css" />
 </head>
 <body>
 <section class="container">
@@ -33,15 +34,26 @@
         </div>
     </section>
     <!--第三幅画面-->
-    <section class="page-c bg-adaptive"></section>
+    <section class="page-c bg-adaptive">
+        <div class="window">
+            <div class="window_close_bg"></div>
+            <div class="window_scene_bg"></div>
+            <div class="window_content">
+                <div class="window_left hover"></div>
+                <div class="window_right hover"></div>
+            </div>
+        </div>
+        <canvas id="snowflake"></canvas>
+    </section>
 </section>
 <script src="js/jquery-1.11.3.js"></script>
 <script src="js/jquery.transit.min.js"></script>
 <script src="js/observer.js"></script>
-<script src="js/christmas.js"></script>
 <script src="js/carousel.js"></script>
+<script src="js/christmas.js"></script>
 <script src="js/pageA.js"></script>
 <script src="js/pageB.js"></script>
 <script src="js/pageC.js"></script>
+<script src="js/snowflake.js"></script>
 </body>
 </html>
