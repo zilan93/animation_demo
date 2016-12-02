@@ -26,12 +26,12 @@ var Qixi = function () {
             waitFlower: 800
         },
         snowflakeURL:[
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake1.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake2.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake3.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake4.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake5.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_practice/images/snowflake6.png'
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake1.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake2.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake3.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake4.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake5.png',
+            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake6.png'
         ]
     };
     var instanceX;

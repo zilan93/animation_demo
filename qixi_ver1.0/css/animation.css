@@ -1,23 +1,23 @@
 /***小男孩走路***/
-.pauseWalk{animation-play-state: paused!important;}
 .slow_walk{animation: man_walking 950ms steps(4) infinite;}
+.pauseWalk{animation-play-state: paused!important;}
 .sun{animation: sunset 30s;}
 .cloud1{animation:anicloud1 30s infinite alternate;}
 .cloud2{animation:anicloud2 60s infinite alternate;}
 .bird_fly{animation:birdFly 400ms steps(3) infinite;}
 .boy_flower{animation: man_walking 950ms steps(4) infinite;}
 .stars1 {animation:stars 800ms 500ms infinite alternate;}
-.stars2 {animation:stars 1000ms infinite alternate;}
-.stars3 {animation:stars 900ms  200ms infinite alternate;}
+.stars2 {animation:stars 2000ms infinite alternate;}
+.stars3 {animation:stars 1900ms  200ms infinite alternate;}
 .stars4 {animation:stars 1500ms infinite alternate;}
 .stars5 {animation:stars 2000ms  100ms infinite alternate;}
-.stars6 {animation:stars 1200ms infinite alternate;}
+.stars6 {animation:stars 1700ms infinite alternate;}
 .water_1{animation:shake 30s 1s infinite alternate;}
 .water_2{animation:shake 30s 2s infinite alternate;}
 .water_3{animation:shake 30s infinite alternate;}
 .water_4{animation:shake 30s 3s infinite alternate;}
 .boy_rotate{background: url("../images/person/boy-rotate.png") no-repeat;}
-.rotate{animation: man_rotate 950ms steps(6) forwards;}
+.rotate{animation: man_rotate 950ms steps(5) forwards;}
 .girl_rotate{animation: girl_rotate 950ms steps(1,start) forwards;}
 .logolightSpeedIn{display:block!important;animation:lightSpeedIn 1s ease-out;}
 .logoshake{animation:logoshake 0.5s;}
@@ -28,7 +28,7 @@
 }
 @keyframes man_rotate {
     0% {background-position:0px;}
-    100% {background-position: -604px;}
+    100% {background-position: -750px;}
 }
 @keyframes girl_rotate {
     0% {background-position: -151px 0;}

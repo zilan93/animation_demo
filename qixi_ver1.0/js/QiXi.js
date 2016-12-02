@@ -11,32 +11,28 @@ var animationEnd = (function () {
     }
     return 'animationend';
 })();
-/**
- * 小孩走路
- *
- */
+//获取数据的高度和偏移值
+var getValue = function (className) {
+    var $elem = $(className);
+    return {
+        height:$elem.height(),
+        offsetTop:$elem.position().top
+    }
+};
 function BoyWalk() {
     var container = $(".ani_wrap");
-    //页面可视区域
-    var visualWidth = container.width();
-    var visualHeight = container.height();
-//获取数据
-    var getValue = function(className) {
-        var $elem = $(className);
-        return {
-            top : $elem.position().top,
-            height : $elem.height()
-        };
-    };
-//路的Y轴
-    var pathY = function () {
-        var data = getValue('.a_background_middle');
-        return data.top + data.height/2;
-    }();
     //设置小男孩位置
     var $boy = $("#boy");
     var boyWidth = $boy.width();
     var boyHeight = $boy.height();
+    //页面可视区域
+    var visualWidth = container.width();
+    var visualHeight = container.height();
+    //获取小男孩的定位值
+    var pathY = function () {
+        var data = getValue(".a_background_middle");
+        return data.offsetTop + data.height / 2;
+    }();
     $boy.css({
         "top" : pathY - boyHeight +25 + "px"
     });
@@ -53,35 +49,35 @@ function BoyWalk() {
     }
     //小男孩走路动作
     function slowWalk() {
-        $boy.addClass("slowWalk");
+        $boy.addClass("slow_walk");
     }
-    //计算位移的值
-    function caculateDis(direction,proportion) {
-        return (direction == 'x' ? visualWidth : visualHeight) * proportion;
+    //将百分比转换成数值
+    function caculateDis(directon,proportion) {
+        return (directon == 'x' ? visualWidth : visualHeight) * proportion;
     }
-    //用transition运动到指定位置
-    function startRun(options, runTimes) {
-        //定义一个Deffered对象
-        var dfdPlay = $.Deferred();
-        restoreWalk();
-        $boy.transition(
-            options,
-            runTimes,
-            'linear',
-            function () {
-                dfdPlay.resolve();
-            });
-        return dfdPlay;
-    }
-    //整合动画运动到指定坐标位置
+    //小男孩走到指定位置
     function walkRun(time,disX,disY) {
         time = time || 3000;
         slowWalk();
-        var d1 = startRun({
-            "left" : disX + "px",
-            "top" : disY ? disY : undefined
-        }, time);
-        return d1;
+        var dl = startRun({
+            "left":disX + "px",
+            "top":disY ? disY : undefined
+        },time);
+        return dl;
+    }
+    //走路到指定位置
+    function startRun(options,runTime) {
+        var dfd = $.Deferred();
+        restoreWalk();
+        $boy.transition(
+            options,
+            runTime,
+            "linear",
+            function () {
+                dfd.resolve();
+            }
+        );
+        return dfd;
     }
     //走进商店
     function walkToshop(runTime) {
@@ -102,11 +98,11 @@ function BoyWalk() {
         var doorTopMiddle = doorObj.height() /2;
 
         instanceX = (doorOffsetLeft + doorMiddle) - (boyPoxLeft + boyMiddle);
-        instanceY = boyPoxTop + boyHeight - (doorOffsetTop + doorTopMiddle);
+        instanceY = boyPoxTop + boyHeight/2 - (doorOffsetTop + doorTopMiddle);
         //开始走路
         var walkPlay = startRun({
             transform:'translateX(' + instanceX + 'px),translateY(-' + instanceY + 'px),scale(0.5,0.5)',
-            opacity:0.1
+            opacity:0.2
         },2000);
         walkPlay.done(function () {
             $boy.css({
@@ -165,49 +161,53 @@ function BoyWalk() {
         getWidth:function () {
             return $boy.width();
         },
+        //还原到站立的姿势
+        resetOriginal:function () {
+            this.stopWalk();
+            $boy.removeClass("boy_flower slow_walk").addClass("boyOriginal")
+        },
         //转身动作
         rotate:function (callback) {
             restoreWalk();
             $boy.addClass('rotate');
             if(callback) {
-                $boy.on(animationEnd,function () {
+                $boy.one(animationEnd,function () {
                     callback();
-                    $(this).off();
                 })
             }
         }
     }
 }
 //开关门的效果
-function doorAction(left, right, time) {
-    var $door = (".door");
-    var doorLeft = $(".left_door");
-    var doorRight = $(".right_door");
-    var defer = $.Deferred();
-    var count = 2;
-    var complete = function () {
-        if(count == 1) {
-            defer.resolve();
+function doorAction(left,right,time) {
+    var dfd = $.Deferred();
+    var $door = $(".door");
+    var leftDoor = $door.find(".left_door");
+    var rightDoor = $door.find(".right_door");
+    var count = 1;
+    var complete = function() {
+        if(count == 2) {
+            dfd.resolve();
             return;
         }
-        count--;
+        count++;
     };
-    doorLeft.transition({
-        'left':left
-    },time,complete);
-    doorRight.transition({
-        'right':right
-    },time,complete);
-    return defer;
+    leftDoor.transition({
+        "left":left
+    },time,"linear",complete);
+    rightDoor.transition({
+        "right":right
+    },time,"linear",complete);
+    return dfd;
 }
 //开门
-function openDoor() {
-    return doorAction('-50%','-50%',2000);
-}
+var openDoor = function () {
+    return doorAction("-50%","-50%",1500);
+};
 //关门
-function shutDoor() {
-    return doorAction('0','0',2000);
-}
+var shutDoor = function () {
+    return doorAction("0","0",1500);
+};
 //灯动画
 var lamp = {
     elem : $('.b_background'),
@@ -223,22 +223,14 @@ function scrollTo(time,proportionX) {
     var disX = visualWidth * proportionX;
     swipe.scrollTo(disX,time);
 }
-//获取数据
-var getValue = function(className) {
-    var $elem = $(className);
-    return {
-        top : $elem.position().top,
-        height : $elem.height()
-    };
-};
-//路的Y轴
-var bridgeY = function () {
-    var data = getValue('.c_background_middle');
-    return data.top;
-}();
 ////////
 //小女孩//
 ////////
+//获取中间桥的偏移
+var bridgeY = function () {
+    var data = getValue(".c_background_middle");
+    return data.top;
+}();
 var girl = {
     elem:$(".girl"),
     rotate:function () {
@@ -250,18 +242,18 @@ var girl = {
     getHeight:function () {
         return this.elem.height();
     },
-    getOffset:function () {
-        return this.elem.offset();
-    },
-    setOffset:function () {
+    setPosition:function () {
         this.elem.css({
             left: visualWidth / 2,
             top: bridgeY - this.getHeight()
         });
+    },
+    getPosition:function () {
+        return this.elem.position();
     }
 };
 //修正小女孩的位置
-girl.setOffset();
+girl.setPosition();
 ////////
 //logo//
 ////////
@@ -279,12 +271,12 @@ var logo = {
 //飘花//
 ////////
 var snowflakeURL = [
-    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake1.png',
-    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake2.png',
-    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake3.png',
-    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake4.png',
-    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake5.png',
-    'C:/Users/Administrator/Desktop/animation_demo/qixi/src/images/snowflake/snowflake6.png'
+    'C:/Users/Administrator/Desktop/animation_demo/qixi_ver1.0/images/snowflake/snowflake1.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi_ver1.0/images/snowflake/snowflake2.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi_ver1.0/images/snowflake/snowflake3.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi_ver1.0/images/snowflake/snowflake4.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi_ver1.0/images/snowflake/snowflake5.png',
+    'C:/Users/Administrator/Desktop/animation_demo/qixi_ver1.0/images/snowflake/snowflake6.png'
 ];
 function snowflake() {
     var $flakeContainer = $("#snowflake");
