@@ -70,46 +70,43 @@
 </div>
 <script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
-<script type="text/javascript" src="js/swipe.js"></script>
 <script type="text/javascript" src="js/QiXi.js"></script>
 <script type="text/javascript">
     var container = $(".ani_wrap");
     var swipe = Swipe(container);
-    var boy = BoyWalk();
 
-    boy.walkTo(5000,0.7).then(function () {
+    animationAction.BoyWalk.walkTo(5000,0.7).then(function () {
         swipe.scrollTo(container.width() * 1,4000);
-        return boy.walkTo(4000,0.5);
+        return animationAction.BoyWalk.walkTo(4000,0.5);
     }).then(function () {
-        return openDoor();
+        return animationAction.openDoor();
     }).then(function () {
-        lamp.bright();
-        return boy.toShop(1000);
+        animationAction.lamp.bright();
+        return animationAction.BoyWalk.toShop(1000);
     }).then(function () {
-        return boy.talkFlower();
+        return animationAction.BoyWalk.talkFlower();
     }).then(function () {
-        return boy.outShop(1000);
+        return animationAction.BoyWalk.outShop(1000);
     }).then(function () {
-        return shutDoor();
+        return animationAction.shutDoor();
     }).then(function () {
-        lamp.dark();
+        animationAction.lamp.dark();
         swipe.scrollTo(container.width() * 2,4000);
-        return boy.walkTo(4000,0.15);
+        return animationAction.BoyWalk.walkTo(4000,0.15);
     }).then(function () {
-        return boy.walkTo(1500,0.25,girl.getPosition().top / visualHeight);
+        return animationAction.BoyWalk.walkTo(1500,0.25,animationAction.girl.getPosition().top / animationAction.config.visualHeight);
     }).then(function () {
-        var proportionX = (girl.getPosition().left - boy.getWidth() + girl.getWidth() / 5) / visualWidth;
-        return boy.walkTo(1500,proportionX);
+        var proportionX = (animationAction.girl.getPosition().left - animationAction.BoyWalk.getWidth() -animationAction.BoyWalk.instanceX() + animationAction.girl.getWidth() / 5) / animationAction.config.visualWidth;
+        return animationAction.BoyWalk.walkTo(1500,proportionX);
     }).then(function () {
-        boy.resetOriginal();
+        animationAction.BoyWalk.resetOriginal();
         setTimeout(function () {
-            girl.rotate();
-            boy.rotate(function () {
-                logo.run();
+            animationAction.girl.rotate();
+            animationAction.BoyWalk.rotate(function () {
+                animationAction.logo.run();
+                animationAction.snowflake();
             });
         },1000);
-    }).then(function () {
-        snowflake();
     })
 </script>
 </body>

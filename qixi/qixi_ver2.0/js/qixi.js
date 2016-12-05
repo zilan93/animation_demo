@@ -26,12 +26,12 @@ var Qixi = function () {
             waitFlower: 800
         },
         snowflakeURL:[
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake1.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake2.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake3.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake4.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake5.png',
-            'https://github.com/zilan93/animation_demo/blob/master/qixi_ver2.0/images/snowflake6.png'
+            'C:/Users/Administrator/Desktop/animation_demo/qixi/qixi_ver2.0/images/snowflake1.png',
+            'C:/Users/Administrator/Desktop/animation_demo/qixi/qixi_ver2.0/images/snowflake2.png',
+            'C:/Users/Administrator/Desktop/animation_demo/qixi/qixi_ver2.0/images/snowflake3.png',
+            'C:/Users/Administrator/Desktop/animation_demo/qixi/qixi_ver2.0/images/snowflake4.png',
+            'C:/Users/Administrator/Desktop/animation_demo/qixi/qixi_ver2.0/images/snowflake5.png',
+            'C:/Users/Administrator/Desktop/animation_demo/qixi/qixi_ver2.0/images/snowflake6.png'
         ]
     };
     var instanceX;
@@ -334,7 +334,7 @@ var Qixi = function () {
             var url = getImagesName();
             return $("<div class='flower' />").css({
                 "top":"-41px",
-                "backgroundImage":"url(' + url + ')",
+                "backgroundImage":'url('+url+')',
                 "background-size":"cover"
             }).addClass("snowRoll");
         }

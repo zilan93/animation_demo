@@ -1,7 +1,0 @@
-1,想要容器width,height为100%，需要先设置html,body宽高为100%；
-2，link不能缺少rel="stylesheet"属性；
-3, 没有child()方法，只有children()和find()方法；children()方法只能遍历子级，find()可遍历子级及以下级。
-4,jquery off()方法用来移除通过on绑定的事件；
-5,translate(100%,0);这个100%是相对于元素自身的宽度而言的；比如一个width:100px;的div,就是将它沿x轴正向移动100px；【注：原点是元素的中心点】
-6,jquery eq(index)用法；用来筛选索引为index（从0开始计算起）的元素，并返回一个新的jquery对象；
-7,background的写法里，背景图片的默认位置是0 0；如果后面设置详细定位的层级小于设置backgroundF的属性的层级，那么后面设置的详细背景图位置是不起作用。在第三个画面的水波里，就是这样，设置background的层级为3，而设置每个水波的层级为1，所以所有水波的位置都为0 0; 
