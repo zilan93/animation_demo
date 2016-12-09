@@ -16,11 +16,11 @@ function pageA(element) {
 pageA.prototype.openWindow = function (callback) {
     var count = 1;
     var complete = function () {
-        ++count;
         if(count === 2) {
             callback && callback();
         }
-    }
+        ++count;
+    };
     var bind = function (data) {
         data.one("transitionend webkitTransitionEnd",function (event) {
             data.removeClass("window_animation");
@@ -30,7 +30,6 @@ pageA.prototype.openWindow = function (callback) {
     bind(this.$leftWin.addClass("window_animation").addClass("hover"));
     bind(this.$rightWin.addClass("window_animation").addClass("hover"));
 }
-
 /**
  * 运行下一个动画
  * @return {Function} [description]
@@ -55,7 +54,7 @@ pageA.prototype.stopWalk = function () {
  */
 pageA.prototype.run = function (callback) {
     var that = this;
-    var next = function () {
+    var next = function() {
         return this.next.apply(this,arguments)
     }.bind(this);
 
@@ -79,7 +78,7 @@ pageA.prototype.run = function (callback) {
                 "time":700,
                 "style":{
                     "top":"7.5rem",
-                    "right":"1rem",
+                    "right":"1.2rem",
                     "scale":"1"
                 }
             })

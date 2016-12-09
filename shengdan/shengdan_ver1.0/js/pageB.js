@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/11/11.
  */
-function pageB(element) {
+function pageB(element,pageComplete) {
     var $boy = element.find(".chri_boy");
     var $girl = element.find(".girl");
     var animationEnd = "animationend webkitAnimationEnd";
@@ -14,7 +14,7 @@ function pageB(element) {
             var dfd = $.Deferred();
             $boy.addClass("chri_boy_walk").transition({
                 "right":"4.5rem"
-            },"15000","linear",function () {
+            },"4000","linear",function () {
                 dfd.resolve();
             });
             return dfd;
@@ -26,7 +26,7 @@ function pageB(element) {
         //解开包裹
         unwrapp:function () {
             var dfd = $.Deferred();
-            $boy.addClass("chri_boy_gift");
+            $boy.removeClass(".chri_boy_stop").addClass("chri_boy_gift");
             $boy.one(animationEnd,function () {
                 dfd.resolve();
             });
@@ -47,6 +47,7 @@ function pageB(element) {
      * 小女孩动作
      */
     var girlAction = {
+        //起立
         standup:function () {
             var dfd = $.Deferred();
             $girl.addClass("girl_stand").one(animationEnd,function () {
@@ -54,6 +55,7 @@ function pageB(element) {
             });
             return dfd;
         },
+        //走路
         girlWalk:function () {
             var dfd = $.Deferred();
             $girl.removeClass("girl_stand").addClass("girl_walk");
@@ -83,17 +85,14 @@ function pageB(element) {
             return dfd;
         }
     };
-    /**
-     * 旋转木马
+     /* 旋转木马*/
 
     var $carousel = element.find("#carousel");
-    var carousel = new Carousel($carousel,{
-        imgUrls:[
+    var imgUrls = [
             "images/carousel/1.png",
             "images/carousel/2.png",
             "images/carousel/3.png"
-        ]
-    });*/
+        ];
     boyAction.walk()
         .then(function () {
             boyAction.stopWalk();
@@ -104,6 +103,9 @@ function pageB(element) {
             girlAction.girlStopWalk();
             return boyAction.unwrapp();
         }).then(function () {
+            setTimeout(function () {
+                var carousel = new Carousel($carousel,{imgUrls:imgUrls});
+            },500);
             return girlAction.girlHangUp();
         })
         .then(function () {

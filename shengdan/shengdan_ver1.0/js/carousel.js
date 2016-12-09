@@ -1,6 +1,9 @@
 //================================================
 //格式化字符串
-var slice = Array.prototype.slice;
+//将数组里的slice方法赋值给slice变量，定义一个toArray函数，
+//toArray函数的作用是，运用call方法，给a对象绑定一个slice方法；
+//slice(start,end);返回从start到end-1处的字符串
+var slice = Array.prototype.slice
 
 function toArray(a, i, j) {
     return slice.call(a, i || 0, j || a.length);
@@ -20,6 +23,7 @@ function isDefined(v) {
  * @param  {[type]} c [源对象]
  * @return {[type]}   [description]
  */
+//将c里面有的，o里面没有的属性添加到o对象中
 function applyIf(o, c) {
     if (o) {
         for (var p in c) {
@@ -35,6 +39,9 @@ function applyIf(o, c) {
  * @class String
  * 格式化字符串
  */
+//将format属性赋值给String对象，即String对象有了自定义的format方法；
+// /\{(\d+)\}/g/，用来匹配1个或多个数字；
+//replace(a,b)用b来替换a
 applyIf(String, {
     format: function(format) {
         var args = toArray(arguments, 1);
@@ -82,7 +89,7 @@ function Carousel(carousel, options) {
 
         return String.format(str,
             start,
-            "1.5rem",
+            "2.5rem",
             imgUrl
         )
     }
@@ -143,7 +150,7 @@ function Carousel(carousel, options) {
         //360
         //480
         //600
-        angle = (count - 1) * rotate + 360;
+        angle = (count - 1) * rotate + 360
         $spinner
             .css({
                 "transform": "rotateY(-" + angle + "deg)",
@@ -158,47 +165,7 @@ function Carousel(carousel, options) {
                 //照成的缩放元素会有动画变化
                 $spinner.css("transition","")
                 $spinner.css("-moz-transition","")
-                callback();
+                alert("旋转完成")
             })
-    }
-    /**
-     * 视频播放
-     * @param  {[type]} index   [description]
-     * @param  {[type]} element [description]
-     * @return {[type]}         [description]
-     */
-    this.palyVideo = function() {
-        //索引从0开始
-        var index = currIndex
-
-        var element = element || $contentElements.eq(index)
-
-        /**
-         * vide标签
-         * @type {[type]}
-         */
-        var $video = $('<video preload="auto"  class="bounceIn" style="width:50%;height:50%;position:absolute;left:30%;top:35%;"></video>');
-
-        $video.css({
-            "position": "absolute",
-            "z-index": "999"
-        })
-
-        //地址
-        $video.attr('src', options.videoUrls[index]);
-
-        //播放
-        $video.playVideo();
-
-        //停止
-        $video.on("ended", function() {
-            $video[0].pause()
-            //退出效果
-            $video.addClass("bounceOut").one("animationend webkitAnimationEnd", function() {
-                $video.remove();
-            })
-        })
-
-        $carousel.after($video)
     }
 }

@@ -11,14 +11,14 @@
 .window{position:absolute;left:9.92rem;top:6.2rem;width:2.6rem;height:1.5rem;cursor:pointer;}
 .window:before{content: "";position:absolute;width:100%;height:0.17rem;display:block;bottom:0.05rem;background:url("../images/a/window-bottom.png") no-repeat;background-size:100% 100%;z-index: 50;}
 .window:after{content: "";position:absolute;bottom:0;width:100%;height:0.09rem;background: url("../images/a/window-bottom-shadow.png") no-repeat;background-size: 100% 100%;}
-.window_content{position:relative;width:91%;margin:0 auto;height:100%;overflow:hidden;transform-style: preserve-3d;perspective:500px;}
+.window_content{position:relative;width:90%;margin:0 auto;height:100%;overflow:hidden;transform-style: preserve-3d;perspective:500px;}
 .window_bg{position:absolute;bottom:0;left:50%;margin-left:-43%;width:86%;height:92%;background: url("../images/a/page-a-window-bg.png") no-repeat;background-size: 100% 100%;z-index: -1;}
 .window_left,.window_right{width:1.17rem;height:1.3rem;z-index:20; }
 .window_left{float:left;background: url("../images/a/window-left.png") no-repeat;background-size:100% 100%;border-radius:0.1rem 0 0 0.1rem;}
 .window_right{float:right;background: url("../images/a/window-right.png") no-repeat;background-size:100% 100%;border-radius:0 0.1rem 0.1rem 0;}
 .window_animation{transition:2s ease-in-out;}
-.window_left.hover{transform:rotateY(60deg) scale(0.95);left:-0.25rem;top:0.1rem;transform-origin: left center;}
-.window_right.hover{transform:rotateY(-60deg) scale(0.95);left:-0.25rem;top:0.1rem;transform-origin: right center;}
+.window_left.hover{transform:rotateY(60deg) scale(0.95);transform-origin: left center;}
+.window_right.hover{transform:rotateY(-60deg) scale(0.95);transform-origin: right center;}
 @keyframes tree_blink {
     0%{background-position:0 0;}
     100%{background-position:-200% 0;}

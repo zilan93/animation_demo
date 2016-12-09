@@ -3,7 +3,6 @@
  * 圣诞主题效果
  * @type {Object}
  */
-
 /**
  * 切换页面
  * 模拟镜头效果
@@ -35,8 +34,9 @@ var Christmas = function () {
     });
     //进入场景B
     observer.subscribe("pageB",function () {
-        new pageB($pageB);
-        observer.publish("completeB");
+        new pageB($pageB,function () {
+            observer.publish("completeB");
+        });
     });
     //进入场景C
     observer.subscribe("pageC",function () {
@@ -54,7 +54,7 @@ var Christmas = function () {
             observer.publish("pageC")
         })
     });
-    /*//切换页面
+    //切换页面
     $("#choose").on("change",function (e) {
         var pageName = e.target.value;
         switch (pageName) {
@@ -69,12 +69,11 @@ var Christmas = function () {
                 });
                 break;
         }
-    })*/
+    })
 };
 $(function () {
     Christmas()
 });
-
 /**
  * 背景音乐
  * @param {[type]} url  [description]
