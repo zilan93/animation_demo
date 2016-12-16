@@ -3,7 +3,7 @@
 //将数组里的slice方法赋值给slice变量，定义一个toArray函数，
 //toArray函数的作用是，运用call方法，给a对象绑定一个slice方法；
 //slice(start,end);返回从start到end-1处的字符串
-var slice = Array.prototype.slice
+var slice = Array.prototype.slice;
 
 function toArray(a, i, j) {
     return slice.call(a, i || 0, j || a.length);
@@ -16,7 +16,6 @@ function toArray(a, i, j) {
 function isDefined(v) {
     return typeof v !== 'undefined';
 }
-
 /**
  * 拷贝对象，跳过已存在的
  * @param  {[type]} o [接受方对象]
@@ -50,8 +49,6 @@ applyIf(String, {
         });
     }
 });
-
-
 /**
  * 3d旋转木马
  * @param  {[type]} argument [description]
@@ -150,7 +147,7 @@ function Carousel(carousel, options) {
         //360
         //480
         //600
-        angle = (count - 1) * rotate + 360
+        angle = (count - 1) * rotate + 360;
         $spinner
             .css({
                 "transform": "rotateY(-" + angle + "deg)",

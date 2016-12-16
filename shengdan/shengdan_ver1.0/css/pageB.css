@@ -1,4 +1,4 @@
-.chri_boy,.chri_boy_head{position:absolute;width:3.89rem;height:4.52rem;background: url("../images/b/boy.png") left top;background-size:1500% 100%;}
+.chri_boy,.chri_boy_head{position:absolute;width:3.5rem;height:4.06rem;background: url("../images/b/boy.png") left top;background-size:1500% 100%;}
 .girl{position:absolute;width:3.5rem;height:4.06rem;left:1rem;top:3.2rem;background: url("../images/b/girl.png");background-size: 2100% 100%;}
 .chri_boy{right:-3.5rem;top:4rem;}
 .chri_boy_walk{animation: chri_boy_walk 1s steps(1) infinite;}

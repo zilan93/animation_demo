@@ -14,7 +14,7 @@ function pageB(element,pageComplete) {
             var dfd = $.Deferred();
             $boy.addClass("chri_boy_walk").transition({
                 "right":"4.5rem"
-            },"4000","linear",function () {
+            },"4000ms","linear",function () {
                 dfd.resolve();
             });
             return dfd;
@@ -60,8 +60,7 @@ function pageB(element,pageComplete) {
             var dfd = $.Deferred();
             $girl.removeClass("girl_stand").addClass("girl_walk");
             $girl.transition({
-                "left":"4.5rem",
-                "top":$boy.offset().top + 0.46
+                "left":"4.5rem"
             },4000,"linear",function () {
                 dfd.resolve();
             });
