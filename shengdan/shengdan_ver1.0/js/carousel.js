@@ -165,7 +165,49 @@ function Carousel(carousel, options) {
                 //照成的缩放元素会有动画变化
                 $spinner.css("transition","")
                 $spinner.css("-moz-transition","")
-                alert("旋转完成")
+                callback();
             })
+    }
+
+    /**
+     * 视频播放
+     * @param  {[type]} index   [description]
+     * @param  {[type]} element [description]
+     * @return {[type]}         [description]
+     */
+    this.palyVideo = function() {
+        //索引从0开始
+        var index = currIndex;
+
+        var element = element || $contentElements.eq(index);
+
+        /**
+         * vide标签
+         * @type {[type]}
+         */
+        var $video = $('<video preload="auto"  class="bounceIn" style="width:50%;height:50%;position:absolute;left:30%;top:35%;"></video>');
+
+        $video.css({
+            "position": "absolute",
+            "z-index": "999"
+        });
+
+        //地址
+        $video.attr('src', options.videoUrls[index]);
+
+        //播放
+        $video.on("loadeddata",function() {
+            $video[0].play();
+        });
+
+        //停止
+        $video.on("ended", function() {
+            $video[0].pause();
+            //退出效果
+            $video.addClass("bounceOut").one("animationend webkitAnimationEnd", function() {
+                $video.remove();
+            })
+        })
+        $carousel.after($video)
     }
 }

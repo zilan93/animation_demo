@@ -93,6 +93,11 @@ function pageB(element,pageComplete) {
             "images/carousel/2.png",
             "images/carousel/3.png"
         ];
+    var videoUrls = [
+        "images/carousel/1.mp4",
+        "images/carousel/2.mp4",
+        "images/carousel/3.mp4"
+    ];
     boyAction.walk()
         .then(function () {
             boyAction.stopWalk();
@@ -104,20 +109,23 @@ function pageB(element,pageComplete) {
             return boyAction.unwrapp();
         }).then(function () {
             setTimeout(function () {
-                var carousel = new Carousel($carousel,{imgUrls:imgUrls});
+                carousel = new Carousel($carousel,{imgUrls:imgUrls,videoUrls:videoUrls});
             },500);
             return girlAction.girlHangUp();
         })
         .then(function () {
             setTimeout(function () {
+                carousel.run(1,carousel.palyVideo);
                 boyAction.strip(1)
-            },1000)
+            },1000);
             setTimeout(function () {
+                carousel.run(2,carousel.palyVideo);
                 boyAction.strip(2)
-            },2000)
+            },2000);
             setTimeout(function () {
+                carousel.run(3,carousel.palyVideo);
                 boyAction.strip(3)
-            },3000)
+            },3000);
             setTimeout(function () {
                 girlAction.girlHug();
                 boyAction.hug()
