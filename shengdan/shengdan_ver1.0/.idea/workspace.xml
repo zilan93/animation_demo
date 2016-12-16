@@ -52,11 +52,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="christmas.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="christmas.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/christmas.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="744">
-              <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
+            <state relative-caret-position="648">
+              <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -69,26 +69,61 @@
               <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
               <folding>
                 <element signature="n#!!doc;n#pageB#0" expanded="false" />
-                <element signature="e#1332#2481#0" expanded="false" />
-                <element signature="e#2790#2876#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="我家工程进度.html" pinned="false" current-in-tab="true">
-        <entry file="file://F:/新平台项目/CMS/舒适100新页面/我家工程进度.html">
+      <file leaf-file-name="shengdan.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/shengdan.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="856">
-              <caret line="182" column="22" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="22" />
+            <state relative-caret-position="-85">
+              <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pageC.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/pageC.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="飘雪.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/飘雪.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="snowflake.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/snowflake.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="98" column="7" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="7" />
               <folding>
-                <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#3;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#5;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#6;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#7;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="e#155#1495#0" expanded="false" />
+                <element signature="e#778#809#0" expanded="false" />
+                <element signature="e#1037#1068#0" expanded="false" />
+                <element signature="e#1228#1264#0" expanded="false" />
+                <element signature="e#1424#1462#0" expanded="false" />
+                <element signature="e#1543#2013#0" expanded="false" />
+                <element signature="e#2018#2040#0" expanded="false" />
+                <element signature="e#2073#2819#0" expanded="false" />
+                <element signature="e#2825#2863#0" expanded="false" />
+                <element signature="e#2917#3167#0" expanded="false" />
+                <element signature="e#3173#3216#0" expanded="false" />
+                <element signature="e#3257#3587#0" expanded="false" />
+                <element signature="e#3593#3622#0" expanded="false" />
+                <element signature="e#3659#3745#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -141,10 +176,10 @@
         <option value="$PROJECT_DIR$/js/christmas.js" />
         <option value="$PROJECT_DIR$/js/pageC.js" />
         <option value="$PROJECT_DIR$/shengdan.html" />
-        <option value="$PROJECT_DIR$/飘雪.html" />
-        <option value="$PROJECT_DIR$/js/snowflake.js" />
         <option value="$PROJECT_DIR$/js/transit.js" />
         <option value="F:/新平台项目/CMS/舒适100新页面/我家工程进度.html" />
+        <option value="$PROJECT_DIR$/飘雪.html" />
+        <option value="$PROJECT_DIR$/js/snowflake.js" />
       </list>
     </option>
   </component>
@@ -155,9 +190,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="823" />
-    <option name="width" value="1091" />
-    <option name="height" value="1069" />
+    <option name="x" value="584" />
+    <option name="width" value="1332" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -185,7 +220,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -204,8 +238,23 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shengdan_ver1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shengdan_ver1.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,17 +431,26 @@
       <workItem from="1481194659506" duration="257000" />
       <workItem from="1481244122221" duration="1506000" />
       <workItem from="1481245917124" duration="582000" />
+      <workItem from="1481855525920" duration="702000" />
+      <workItem from="1481857378847" duration="922000" />
+      <workItem from="1481859205381" duration="1518000" />
+      <workItem from="1481866353337" duration="1480000" />
+      <workItem from="1481868197755" duration="1887000" />
+      <workItem from="1481870108596" duration="1505000" />
+      <workItem from="1481872017132" duration="2234000" />
+      <workItem from="1481874270627" duration="1803000" />
+      <workItem from="1481876108233" duration="2063000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="139878000" />
+    <option name="totallyTimeSpent" value="153992000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="823" y="0" width="1091" height="1069" extended-state="0" />
+    <frame x="584" y="0" width="1332" height="1040" extended-state="1" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17767441" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15273556" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -441,7 +499,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -648,13 +706,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../qixi_practice/js/qixi.js" />
-    <entry file="file://$PROJECT_DIR$/shengdan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="685">
-          <caret line="56" column="39" selection-start-line="56" selection-start-column="39" selection-end-line="56" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/pageC.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="96">
@@ -666,35 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="18" column="45" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/snowflake.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/christmas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/pageC.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/飘雪.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -731,16 +753,14 @@
           <caret line="14" column="55" selection-start-line="14" selection-start-column="55" selection-end-line="14" selection-end-column="55" />
           <folding>
             <element signature="n#!!doc;n#pageB#0" expanded="false" />
-            <element signature="e#1332#2481#0" expanded="false" />
-            <element signature="e#2790#2876#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://F:/新平台项目/CMS/舒适100新页面/我家工程进度.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="856">
-          <caret line="182" column="22" selection-start-line="182" selection-start-column="22" selection-end-line="182" selection-end-column="22" />
+        <state relative-caret-position="2088">
+          <caret line="173" column="58" selection-start-line="173" selection-start-column="58" selection-end-line="173" selection-end-column="58" />
           <folding>
             <element signature="n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#2;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -753,10 +773,65 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/飘雪.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="7" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/snowflake.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="98" column="7" selection-start-line="98" selection-start-column="7" selection-end-line="98" selection-end-column="7" />
+          <folding>
+            <element signature="e#155#1495#0" expanded="false" />
+            <element signature="e#778#809#0" expanded="false" />
+            <element signature="e#1037#1068#0" expanded="false" />
+            <element signature="e#1228#1264#0" expanded="false" />
+            <element signature="e#1424#1462#0" expanded="false" />
+            <element signature="e#1543#2013#0" expanded="false" />
+            <element signature="e#2018#2040#0" expanded="false" />
+            <element signature="e#2073#2819#0" expanded="false" />
+            <element signature="e#2825#2863#0" expanded="false" />
+            <element signature="e#2917#3167#0" expanded="false" />
+            <element signature="e#3173#3216#0" expanded="false" />
+            <element signature="e#3257#3587#0" expanded="false" />
+            <element signature="e#3593#3622#0" expanded="false" />
+            <element signature="e#3659#3745#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/pageB.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/pageC.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="16" column="1" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shengdan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/christmas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="46" column="52" selection-start-line="46" selection-start-column="52" selection-end-line="46" selection-end-column="52" />
           <folding />
         </state>
       </provider>
