@@ -38,9 +38,13 @@ function pageB(element,pageComplete) {
         },
         //拥抱
         hug:function () {
-            $boy.addClass("chri_boy_walk_to_girl").one(animationEnd,function () {
+            var dfd = $.Deferred();
+            $boy.addClass("chri_boy_walk_to_girl").transition({
+                "right":"5rem"
+            },"1000ms","linear",function () {
                 $(".chri_boy_head").show();
-            })
+                dfd.resolve();
+            });
         }
         };
     /**
@@ -60,7 +64,8 @@ function pageB(element,pageComplete) {
             var dfd = $.Deferred();
             $girl.removeClass("girl_stand").addClass("girl_walk");
             $girl.transition({
-                "left":"4.5rem"
+                "left":"4.5rem",
+                "top":"4rem"
             },4000,"linear",function () {
                 dfd.resolve();
             });
@@ -78,8 +83,13 @@ function pageB(element,pageComplete) {
         },
         girlHug:function () {
             var dfd = $.Deferred();
-            $girl.addClass("girl_hug").one(animationEnd,function () {
-                dfd.resolve();
+            $girl.addClass("girl_walk").transition({
+                "left":"7rem",
+                "top":"4rem"
+            },"1000ms","linear",function () {
+                $girl.addClass("girl_hug").one(animationEnd,function () {
+                    dfd.resolve();
+                });
             });
             return dfd;
         }
@@ -125,9 +135,13 @@ function pageB(element,pageComplete) {
                 carousel.run(3,carousel.palyVideo);
                 boyAction.strip(3)
             },3000);
-            setTimeout(function () {
-                girlAction.girlHug();
-                boyAction.hug()
-            },4000)
+            return girlAction.girlHug();
+        })
+        .then(function () {
+            $("#carousel").hide();
+            return boyAction.hug();
+        })
+        .then(function () {
+            pageComplete();
         })
 }

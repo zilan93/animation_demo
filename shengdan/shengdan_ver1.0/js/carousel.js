@@ -53,7 +53,7 @@ applyIf(String, {
  * 3d旋转木马
  * @param  {[type]} argument [description]
  * @return {[type]}          [description]
- */
+*/
 function Carousel(carousel, options) {
     //图片
     var imgUrls = options.imgUrls;
@@ -78,7 +78,7 @@ function Carousel(carousel, options) {
      * 创建结构
      * @param  {[type]} imgUrl [description]
      * @return {[type]}        [description]
-     */
+*/
     function createStr(imgUrl) {
         var str = '<figure style="transform:rotateY({0}deg) translateZ({1}) scaleY(.9);position:absolute;">'
             + '<img src="{2}" style="width:100%;height:100%;">'
@@ -94,11 +94,11 @@ function Carousel(carousel, options) {
     /**
      * 初始化样式
      * @return {[type]} [description]
-     */
+*/
     function initStyle() {
         //场景元素
         $carousel.css({
-            // "transform": "scale(0.3)",
+            "transform": "scale(0.3)",
             "-webkit-perspective": "500",
             "-moz-perspective": "500px",
             "position": "absolute",
@@ -115,7 +115,7 @@ function Carousel(carousel, options) {
     /**
      * 绘制页面节点
      * @return {[type]} [description]
-     */
+*/
     function render() {
         //创建内容
         var contentStr = '';
@@ -141,7 +141,7 @@ function Carousel(carousel, options) {
      * @param  {[type]}   count    [description]
      * @param  {Function} callback [description]
      * @return {[type]}            [description]
-     */
+*/
     this.run = function(count, callback) {
         currIndex = count;
         //360
@@ -160,28 +160,28 @@ function Carousel(carousel, options) {
             .one("transitionend webkitTransitionend", function() {
                 //去掉transition保留在样式上
                 //照成的缩放元素会有动画变化
-                $spinner.css("transition","")
-                $spinner.css("-moz-transition","")
-                callback();
+                $spinner.css("transition","");
+                $spinner.css("-moz-transition","");
+                callback && callback();
             })
-    }
+    };
 
     /**
      * 视频播放
      * @param  {[type]} index   [description]
      * @param  {[type]} element [description]
      * @return {[type]}         [description]
-     */
+*/
     this.palyVideo = function() {
         //索引从0开始
-        var index = currIndex;
+        var index = currIndex - 1;
 
         var element = element || $contentElements.eq(index);
 
         /**
          * vide标签
          * @type {[type]}
-         */
+*/
         var $video = $('<video preload="auto"  class="bounceIn" style="width:50%;height:50%;position:absolute;left:30%;top:35%;"></video>');
 
         $video.css({
@@ -204,7 +204,7 @@ function Carousel(carousel, options) {
             $video.addClass("bounceOut").one("animationend webkitAnimationEnd", function() {
                 $video.remove();
             })
-        })
+        });
         $carousel.after($video)
     }
 }

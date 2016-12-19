@@ -7,7 +7,7 @@
 .boy_strip_1{background-position:-800% 0;}
 .boy_strip_2{background-position:-900% 0;}
 .boy_strip_3{background-position:-1000% 0;}
-.chri_boy_head{display:none;right:4.5rem;top:4rem;background-position:-1400% top;}
+.chri_boy_head{display:none;right:5rem;top:4rem;background-position:-1400% top;}
 .chri_boy_walk_to_girl{animation: chri_boy_walk_to_girl 1s steps(1) both;}
 .girl_stand{animation: girl_stand 500ms steps(5) forwards;}
 .girl_walk{animation: girl_walk 1.5s steps(4,start) infinite;}
