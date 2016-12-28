@@ -35,7 +35,7 @@ var Christmas = function () {
     //进入场景B
     observer.subscribe("pageB",function () {
         new pageB($pageB,function () {
-            observer.publish("completeB");
+            //observer.publish("completeB");
         });
     });
     //进入场景C

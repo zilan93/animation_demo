@@ -17,24 +17,32 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DockManager">
+    <window id="1">
+      <content type="file-editors">
+        <state>
+          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+            <file leaf-file-name="shengdan.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/shengdan.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="336">
+                    <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+          </leaf>
+        </state>
+      </content>
+    </window>
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="shengdan" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="shengdan.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/shengdan.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-              <folding>
-                <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="christmas.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/christmas.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -44,7 +52,6 @@
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="n#!!doc;n#changePage#0" expanded="false" />
                 <element signature="e#334#349#0" expanded="false" />
-                <element signature="e#1749#1768#0" expanded="false" />
                 <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
                 <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
               </folding>
@@ -55,35 +62,40 @@
       <file leaf-file-name="pageB.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/css/pageB.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="210">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pageB.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pageB.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/pageB.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="338">
+              <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
               <folding>
-                <element signature="e#2802#2888#0" expanded="false" />
-                <element signature="e#2907#2960#0" expanded="false" />
+                <element signature="e#617#701#0" expanded="false" />
+                <element signature="e#1034#1123#0" expanded="false" />
+                <element signature="e#1419#1609#0" expanded="false" />
+                <element signature="e#2369#2619#0" expanded="false" />
+                <element signature="e#2798#2919#0" expanded="false" />
+                <element signature="e#2941#3046#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="carousel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="carousel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/carousel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3696">
-              <caret line="170" column="1" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
+            <state relative-caret-position="3192">
+              <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <marker date="1481279214522" expanded="true" signature="1796:1867" ph="..." />
-                <marker date="1481279214522" expanded="true" signature="1908:1931" ph="..." />
+                <marker date="1482113129906" expanded="true" signature="1788:1859" ph="..." />
+                <marker date="1482113129906" expanded="true" signature="1900:1923" ph="..." />
+                <marker date="1482113129906" expanded="true" signature="4345:4401" ph="..." />
               </folding>
             </state>
           </provider>
@@ -120,8 +132,9 @@
         <option value="$PROJECT_DIR$/shengdan_ver1.0/css/pageA.css" />
         <option value="$PROJECT_DIR$/shengdan_ver1.0/js/pageA.js" />
         <option value="$PROJECT_DIR$/shengdan_ver1.0/js/christmas.js" />
-        <option value="$PROJECT_DIR$/shengdan_ver1.0/js/pageB.js" />
         <option value="$PROJECT_DIR$/shengdan_ver1.0/js/carousel.js" />
+        <option value="$PROJECT_DIR$/shengdan_ver1.0/css/pageB.css" />
+        <option value="$PROJECT_DIR$/shengdan_ver1.0/js/pageB.js" />
       </list>
     </option>
   </component>
@@ -132,8 +145,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="912" />
-    <option name="width" value="1002" />
+    <option name="x" value="387" />
+    <option name="width" value="1495" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -161,6 +174,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -231,8 +246,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,6 +254,62 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -266,17 +335,23 @@
       <workItem from="1481275576724" duration="852000" />
       <workItem from="1481277386847" duration="599000" />
       <workItem from="1481279201643" duration="264000" />
+      <workItem from="1482911555037" duration="678000" />
+      <workItem from="1482912253335" duration="1805000" />
+      <workItem from="1482914078453" duration="1502000" />
+      <workItem from="1482915924036" duration="1859000" />
+      <workItem from="1482917802298" duration="1833000" />
+      <workItem from="1482919653501" duration="1229000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15265000" />
+    <option name="totallyTimeSpent" value="24171000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="912" y="0" width="1002" height="1040" extended-state="1" />
+    <frame x="387" y="0" width="1495" height="1040" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20486815" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12440839" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -305,13 +380,31 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/pageA.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc;n#pageA#0" expanded="false" />
+            <element signature="n#!!block;n#pageA#0" expanded="false" />
+            <element signature="e#315#362#0" expanded="false" />
+            <element signature="e#412#904#0" expanded="false" />
+            <element signature="e#905#959#0" expanded="false" />
+            <element signature="e#1002#1189#0" expanded="false" />
+            <element signature="e#1191#1206#0" expanded="false" />
+            <element signature="e#1246#1286#0" expanded="false" />
+            <element signature="e#1288#1316#0" expanded="false" />
+            <element signature="e#1359#2185#0" expanded="false" />
+            <element signature="e#1485#1620#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/shengdan.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -323,7 +416,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -343,8 +435,12 @@
         <state relative-caret-position="600">
           <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
-            <element signature="e#2802#2888#0" expanded="false" />
-            <element signature="e#2907#2960#0" expanded="false" />
+            <element signature="e#617#701#0" expanded="false" />
+            <element signature="e#1034#1123#0" expanded="false" />
+            <element signature="e#1419#1609#0" expanded="false" />
+            <element signature="e#2369#2619#0" expanded="false" />
+            <element signature="e#2798#2919#0" expanded="false" />
+            <element signature="e#2941#3046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -353,9 +449,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -367,7 +461,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -387,8 +480,12 @@
         <state relative-caret-position="600">
           <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
           <folding>
-            <element signature="e#2802#2888#0" expanded="false" />
-            <element signature="e#2907#2960#0" expanded="false" />
+            <element signature="e#617#701#0" expanded="false" />
+            <element signature="e#1034#1123#0" expanded="false" />
+            <element signature="e#1419#1609#0" expanded="false" />
+            <element signature="e#2369#2619#0" expanded="false" />
+            <element signature="e#2798#2919#0" expanded="false" />
+            <element signature="e#2941#3046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -397,9 +494,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -411,7 +506,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -430,9 +524,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -444,7 +536,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -464,8 +555,12 @@
         <state relative-caret-position="2376">
           <caret line="104" column="29" selection-start-line="104" selection-start-column="29" selection-end-line="104" selection-end-column="29" />
           <folding>
-            <element signature="e#2802#2888#0" expanded="false" />
-            <element signature="e#2907#2960#0" expanded="false" />
+            <element signature="e#617#701#0" expanded="false" />
+            <element signature="e#1034#1123#0" expanded="false" />
+            <element signature="e#1419#1609#0" expanded="false" />
+            <element signature="e#2369#2619#0" expanded="false" />
+            <element signature="e#2798#2919#0" expanded="false" />
+            <element signature="e#2941#3046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -476,8 +571,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1481279214522" expanded="true" signature="1796:1867" ph="..." />
-            <marker date="1481279214522" expanded="true" signature="1908:1931" ph="..." />
+            <marker date="1482113129906" expanded="true" signature="1788:1859" ph="..." />
+            <marker date="1482113129906" expanded="true" signature="1900:1923" ph="..." />
+            <marker date="1482113129906" expanded="true" signature="4345:4401" ph="..." />
           </folding>
         </state>
       </provider>
@@ -486,9 +582,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -500,7 +594,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -520,8 +613,12 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2802#2888#0" expanded="false" />
-            <element signature="e#2907#2960#0" expanded="false" />
+            <element signature="e#617#701#0" expanded="false" />
+            <element signature="e#1034#1123#0" expanded="false" />
+            <element signature="e#1419#1609#0" expanded="false" />
+            <element signature="e#2369#2619#0" expanded="false" />
+            <element signature="e#2798#2919#0" expanded="false" />
+            <element signature="e#2941#3046#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -537,9 +634,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="696">
           <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -568,9 +663,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -582,7 +675,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -620,9 +712,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -634,7 +724,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -672,9 +761,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="38" column="47" selection-start-line="38" selection-start-column="47" selection-end-line="38" selection-end-column="47" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -686,7 +773,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -704,9 +790,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -725,7 +809,6 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
           </folding>
@@ -767,16 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/shengdan.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="36" column="26" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="26" />
-          <folding>
-            <element signature="n#section#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/christmas.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1488">
@@ -785,28 +858,8 @@
             <element signature="n#!!doc" expanded="true" />
             <element signature="n#!!doc;n#changePage#0" expanded="false" />
             <element signature="e#334#349#0" expanded="false" />
-            <element signature="e#1749#1768#0" expanded="false" />
             <element signature="n#!!doc;n#HTML5Audio#0" expanded="false" />
             <element signature="n#!!block;n#HTML5Audio#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/css/pageB.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/pageB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding>
-            <element signature="e#2802#2888#0" expanded="false" />
-            <element signature="e#2907#2960#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -833,12 +886,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/carousel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3696">
-          <caret line="170" column="1" selection-start-line="170" selection-start-column="1" selection-end-line="170" selection-end-column="1" />
+        <state relative-caret-position="3192">
+          <caret line="137" column="0" selection-start-line="137" selection-start-column="0" selection-end-line="137" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <marker date="1481279214522" expanded="true" signature="1796:1867" ph="..." />
-            <marker date="1481279214522" expanded="true" signature="1908:1931" ph="..." />
+            <marker date="1482113129906" expanded="true" signature="1788:1859" ph="..." />
+            <marker date="1482113129906" expanded="true" signature="1900:1923" ph="..." />
+            <marker date="1482113129906" expanded="true" signature="4345:4401" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/shengdan.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/css/pageB.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/shengdan_ver1.0/js/pageB.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+          <folding>
+            <element signature="e#617#701#0" expanded="false" />
+            <element signature="e#1034#1123#0" expanded="false" />
+            <element signature="e#1419#1609#0" expanded="false" />
+            <element signature="e#2369#2619#0" expanded="false" />
+            <element signature="e#2798#2919#0" expanded="false" />
+            <element signature="e#2941#3046#0" expanded="false" />
           </folding>
         </state>
       </provider>

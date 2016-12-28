@@ -13,7 +13,8 @@
 .girl_walk{animation: girl_walk 1.5s steps(4,start) infinite;}
 .girl_stop{background-position:-1000% 0;}
 .girl_hangup{animation: girl_hangup 1s steps(1) forwards;}
-.girl_hug{animation: girl_hug 1s steps(2) forwards;}
+.girl_weep{animation: girl_weep 2s steps(3,start) infinite;}
+.girl_hug{animation: girl_hug 1.5s steps(3) forwards;}
 .bounceIn {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -56,8 +57,12 @@
      0% {background-position:-1100% 0;}
      100%{background-position:-1200% 0;}
  }
+@keyframes girl_weep {
+    0% {background-position:-1300% 0;}
+    100%{background-position:-1600% 0;}
+}
 @keyframes girl_hug {
-    0% {background-position:-1800% 0;}
+    0% {background-position:-1700% 0;}
     100%{background-position:-2000% 0;}
 }
 @keyframes bounceIn {

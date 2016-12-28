@@ -38,13 +38,9 @@ function pageB(element,pageComplete) {
         },
         //拥抱
         hug:function () {
-            var dfd = $.Deferred();
-            $boy.addClass("chri_boy_walk_to_girl").transition({
-                "right":"5rem"
-            },"1000ms","linear",function () {
+            $boy.addClass("chri_boy_walk_to_girl").one(animationEnd,function () {
                 $(".chri_boy_head").show();
-                dfd.resolve();
-            });
+            })
         }
         };
     /**
@@ -60,38 +56,40 @@ function pageB(element,pageComplete) {
             return dfd;
         },
         //走路
-        girlWalk:function () {
+        girlWalk:function (callback) {
             var dfd = $.Deferred();
             $girl.removeClass("girl_stand").addClass("girl_walk");
             $girl.transition({
                 "left":"4.5rem",
                 "top":"4rem"
-            },4000,"linear",function () {
+            },"4000ms","linear",function() {
+                callback();
                 dfd.resolve();
             });
             return dfd;
         },
+        //停止走路
         girlStopWalk:function () {
             $girl.removeClass("girl_walk").addClass("girl_stop");
         },
-        girlHangUp:function () {
-            var dfd = $.Deferred();
+        //选择
+        choose:function (callback) {
             $girl.addClass("girl_hangup").one(animationEnd,function () {
-                dfd.resolve();
+                callback();
             });
-            return dfd;
         },
-        girlHug:function () {
-            var dfd = $.Deferred();
-            $girl.addClass("girl_walk").transition({
-                "left":"7rem",
-                "top":"4rem"
-            },"1000ms","linear",function () {
-                $girl.addClass("girl_hug").one(animationEnd,function () {
-                    dfd.resolve();
-                });
+        //泪奔
+        weepWalk:function (callback) {
+            $girl.addClass("girl_weep").transition({
+                "left":"7rem"
+            },1000,"linear",function () {
+                $girl.removeClass("girl_weep").addClass("girl_stop");
+                callback();
             });
-            return dfd;
+        },
+        //拥抱
+        hug:function () {
+            $girl.addClass("girl_hug");
         }
     };
      /* 旋转木马*/
@@ -111,37 +109,30 @@ function pageB(element,pageComplete) {
         .then(function () {
             boyAction.stopWalk();
             return girlAction.standup();
-        }).then(function () {
-            return girlAction.girlWalk();
-        }).then(function () {
-            girlAction.girlStopWalk();
+        })
+        .then(function () {
+            return girlAction.girlWalk(girlAction.girlStopWalk);
+        })
+        .then(function () {
             return boyAction.unwrapp();
-        }).then(function () {
-            setTimeout(function () {
-                carousel = new Carousel($carousel,{imgUrls:imgUrls,videoUrls:videoUrls});
-            },500);
-            return girlAction.girlHangUp();
         })
         .then(function () {
-            setTimeout(function () {
-                carousel.run(1,carousel.palyVideo);
-                boyAction.strip(1)
-            },1000);
-            setTimeout(function () {
-                carousel.run(2,carousel.palyVideo);
-                boyAction.strip(2)
-            },2000);
-            setTimeout(function () {
-                carousel.run(3,carousel.palyVideo);
-                boyAction.strip(3)
-            },3000);
-            return girlAction.girlHug();
-        })
-        .then(function () {
-            $("#carousel").hide();
-            return boyAction.hug();
-        })
-        .then(function () {
-            pageComplete();
+            girlAction.choose(function () {
+                setTimeout(function () {
+                    boyAction.strip(1)
+                },1000);
+                setTimeout(function () {
+                    boyAction.strip(2)
+                },2000);
+                setTimeout(function () {
+                    boyAction.strip(3)
+                },3000);
+                setTimeout(function () {
+                    girlAction.weepWalk(function () {
+                        boyAction.hug();
+                        girlAction.hug();
+                    })
+                },4000)
+            });
         })
 }
