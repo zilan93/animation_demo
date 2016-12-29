@@ -24,10 +24,11 @@ function pageB(element,pageComplete) {
             $boy.removeClass("chri_boy_walk").addClass("chri_boy_stop");
         },
         //解开包裹
-        unwrapp:function () {
+        unwrapp:function (callback) {
             var dfd = $.Deferred();
             $boy.removeClass(".chri_boy_stop").addClass("chri_boy_gift");
             $boy.one(animationEnd,function () {
+                callback();
                 dfd.resolve();
             });
             return dfd;
@@ -93,7 +94,7 @@ function pageB(element,pageComplete) {
         }
     };
      /* 旋转木马*/
-
+    var carousel;
     var $carousel = element.find("#carousel");
     var imgUrls = [
             "images/carousel/1.png",
@@ -114,17 +115,22 @@ function pageB(element,pageComplete) {
             return girlAction.girlWalk(girlAction.girlStopWalk);
         })
         .then(function () {
-            return boyAction.unwrapp();
+            return boyAction.unwrapp(function () {
+                carousel = new Carousel($carousel,{imgUrls:imgUrls,videoUrls:videoUrls});
+            });
         })
         .then(function () {
             girlAction.choose(function () {
                 setTimeout(function () {
+                    carousel.run(1,carousel.palyVideo);
                     boyAction.strip(1)
                 },1000);
                 setTimeout(function () {
+                    carousel.run(2,carousel.palyVideo);
                     boyAction.strip(2)
                 },2000);
                 setTimeout(function () {
+                    carousel.run(3,carousel.palyVideo);
                     boyAction.strip(3)
                 },3000);
                 setTimeout(function () {

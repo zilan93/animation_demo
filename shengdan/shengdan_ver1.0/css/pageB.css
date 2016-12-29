@@ -7,12 +7,12 @@
 .boy_strip_1{background-position:-800% 0;}
 .boy_strip_2{background-position:-900% 0;}
 .boy_strip_3{background-position:-1000% 0;}
-.chri_boy_head{display:none;right:5rem;top:4rem;background-position:-1400% top;}
+.chri_boy_head{display:none;right:4.5rem;top:4rem;background-position:-1400% top;z-index: 2;}
 .chri_boy_walk_to_girl{animation: chri_boy_walk_to_girl 1s steps(1) both;}
 .girl_stand{animation: girl_stand 500ms steps(5) forwards;}
 .girl_walk{animation: girl_walk 1.5s steps(4,start) infinite;}
 .girl_stop{background-position:-1000% 0;}
-.girl_hangup{animation: girl_hangup 1s steps(1) forwards;}
+.girl_hangup{animation: girl_hangup 1s steps(1,start) forwards;}
 .girl_weep{animation: girl_weep 2s steps(3,start) infinite;}
 .girl_hug{animation: girl_hug 1.5s steps(3) forwards;}
 .bounceIn {
@@ -54,7 +54,7 @@
     100%{background-position:-900% 0;}
 }
 @keyframes girl_hangup {
-     0% {background-position:-1100% 0;}
+     0% {background-position:-1000% 0;}
      100%{background-position:-1200% 0;}
  }
 @keyframes girl_weep {
@@ -63,7 +63,7 @@
 }
 @keyframes girl_hug {
     0% {background-position:-1700% 0;}
-    100%{background-position:-2000% 0;}
+    100%{left:7.55rem;background-position:-2000% 0;}
 }
 @keyframes bounceIn {
     from, 20%, 40%, 60%, 80%, to {

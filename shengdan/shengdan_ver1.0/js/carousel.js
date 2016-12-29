@@ -172,7 +172,7 @@ function Carousel(carousel, options) {
      * @param  {[type]} element [description]
      * @return {[type]}         [description]
 */
-    this.palyVideo = function() {
+    this.palyVideo = function(e) {
         //索引从0开始
         var index = currIndex - 1;
 
@@ -195,6 +195,9 @@ function Carousel(carousel, options) {
         //播放
         $video.on("loadeddata",function() {
             $video[0].play();
+            setTimeout(function () {
+                e.load()
+            },1000)
         });
 
         //停止
@@ -203,6 +206,7 @@ function Carousel(carousel, options) {
             //退出效果
             $video.addClass("bounceOut").one("animationend webkitAnimationEnd", function() {
                 $video.remove();
+                e.complete()
             })
         });
         $carousel.after($video)
