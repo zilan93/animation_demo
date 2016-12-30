@@ -4,7 +4,58 @@
 function pageB(element,pageComplete) {
     var $boy = element.find(".chri_boy");
     var $girl = element.find(".girl");
+    var $carousel = element.find("#carousel");
     var animationEnd = "animationend webkitAnimationEnd";
+    function n() {
+        var e = $.Deferred();
+        return function () {
+            r(e)
+        }.defer(500),
+            e
+    }
+    function r(e) {
+        var t = o(),
+            n = 1,
+            r = t.numpics,
+            s = function () {
+                i(n,t,function () {
+                    ++n;
+                    a()
+                })
+            }
+    }i
+    function (e,t,n) {
+        t.run(e);
+            d.choose(function(
+                t.selected(function(
+                    t.playVideo({
+                        load:function(
+                            d.reset();
+                            t.reset();
+                            p.strip(e);
+                        ),
+                complete:function() {
+                                n()
+        }
+                })
+                ))
+            ))
+    }
+    function o() {
+        var e = new Carousel($carousel,{
+            imgUrls: [
+            "images/carousel/1.png",
+            "images/carousel/2.png",
+            "images/carousel/3.png"
+        ],
+            videoUrls: [
+            "images/carousel/1.mp4",
+            "images/carousel/2.mp4",
+            "images/carousel/3.mp4"
+        ]
+        });
+        return e;
+    }
     /**
      * 小男孩动作
      */
@@ -24,11 +75,10 @@ function pageB(element,pageComplete) {
             $boy.removeClass("chri_boy_walk").addClass("chri_boy_stop");
         },
         //解开包裹
-        unwrapp:function (callback) {
+        unwrapp:function () {
             var dfd = $.Deferred();
             $boy.removeClass(".chri_boy_stop").addClass("chri_boy_gift");
             $boy.one(animationEnd,function () {
-                callback();
                 dfd.resolve();
             });
             return dfd;
@@ -57,14 +107,13 @@ function pageB(element,pageComplete) {
             return dfd;
         },
         //走路
-        girlWalk:function (callback) {
+        girlWalk:function () {
             var dfd = $.Deferred();
             $girl.removeClass("girl_stand").addClass("girl_walk");
             $girl.transition({
                 "left":"4.5rem",
                 "top":"4rem"
             },"4000ms","linear",function() {
-                callback();
                 dfd.resolve();
             });
             return dfd;
@@ -95,43 +144,36 @@ function pageB(element,pageComplete) {
     };
      /* 旋转木马*/
     var carousel;
-    var $carousel = element.find("#carousel");
-    var imgUrls = [
-            "images/carousel/1.png",
-            "images/carousel/2.png",
-            "images/carousel/3.png"
-        ];
-    var videoUrls = [
-        "images/carousel/1.mp4",
-        "images/carousel/2.mp4",
-        "images/carousel/3.mp4"
-    ];
     boyAction.walk()
         .then(function () {
             boyAction.stopWalk();
             return girlAction.standup();
         })
         .then(function () {
-            return girlAction.girlWalk(girlAction.girlStopWalk);
+            return girlAction.girlWalk();
         })
         .then(function () {
-            return boyAction.unwrapp(function () {
-                carousel = new Carousel($carousel,{imgUrls:imgUrls,videoUrls:videoUrls});
-            });
+            girlAction.girlStopWalk();
+            return boyAction.unwrapp();
         })
         .then(function () {
+            carousel = new Carousel($carousel,{imgUrls:imgUrls,videoUrls:videoUrls});
+
             girlAction.choose(function () {
                 setTimeout(function () {
-                    carousel.run(1,carousel.palyVideo);
-                    boyAction.strip(1)
+                    //carousel.run(1,carousel.palyVideo);
+                    boyAction.strip(1);
+                    alert(0);
                 },1000);
                 setTimeout(function () {
-                    carousel.run(2,carousel.palyVideo);
-                    boyAction.strip(2)
+                    //carousel.run(2,carousel.palyVideo);
+                    boyAction.strip(2);
+                    alert(1);
                 },2000);
                 setTimeout(function () {
-                    carousel.run(3,carousel.palyVideo);
-                    boyAction.strip(3)
+                    //carousel.run(3,carousel.palyVideo);
+                    boyAction.strip(3);
+                    alert(2);
                 },3000);
                 setTimeout(function () {
                     girlAction.weepWalk(function () {

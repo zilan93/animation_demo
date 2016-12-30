@@ -2,31 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style rel="stylesheet">
-        #carousel{position:absolute;left:6.8rem;top:3.5rem;perspective:500px;}
-        #spinner{width:4rem;transform-style: preserve-3d;}
-        #spinner figure{width:4rem;position:absolute;margin:0;cursor:pointer;}
-        #spinner figure img{max-width: 100%;}
-        #spinner figure:first-child{transform:rotateY(0deg) translateZ(1.5rem);}
-        #spinner figure:nth-child(2){transform:rotateY(120deg) translateZ(1.5rem);}
-        #spinner figure:last-child{transform:rotateY(240deg) translateZ(1.5rem);}
-    </style>
 </head>
 <body>
 <div id="carousel">
-    <figure id="spinner">
-        <figure>
-            <img src="images/carousel/1.png" alt="">
-        </figure>
-        <figure>
-            <img src="images/carousel/2.png" alt="">
-        </figure>
-        <figure>
-            <img src="images/carousel/3.png" alt="">
-        </figure>
-    </figure>
+    <figure id="spinner"></figure>
 </div>
 <script src="js/jquery-1.11.3.js"></script>
+<script src="js/carousel.js"></script>
 <script type="text/javascript">
     //rem设置
     (function(doc, win) {
@@ -43,15 +25,20 @@
         doc.addEventListener('DOMContentLoaded', recalc, false);
     })(document, window);
 
-    //图片旋转
-    var angle = 0;
-    $("#spinner").on("click","figure",function () {
-        angle -= 120;
-        $(this).parent().css({
-            "transform":"rotateY(" + angle + "deg)",
-            "transition":"all 1s ease-out"
-        });
-    })
+    var $carousel = $("#carousel");
+    var imgUrls = [
+        "images/carousel/1.png",
+        "images/carousel/2.png",
+        "images/carousel/3.png"
+    ];
+    var videoUrls = [
+        "images/carousel/1.mp4",
+        "images/carousel/2.mp4",
+        "images/carousel/3.mp4"
+    ];
+    var carousel = new Carousel($carousel,{imgUrls:imgUrls,videoUrls:videoUrls});
+    carousel.run(2,carousel.palyVideo);
+    carousel.run(3,carousel.palyVideo);
 </script>
 </body>
 </html>

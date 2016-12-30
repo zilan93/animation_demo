@@ -2,7 +2,8 @@
 //格式化字符串
 //将数组里的slice方法赋值给slice变量，定义一个toArray函数，
 //toArray函数的作用是，运用call方法，给a对象绑定一个slice方法；
-//slice(start,end);返回从start到end-1处的字符串
+//即转换成数组；
+//slice(start,end);返回从start到end-1处的字符串;
 var slice = Array.prototype.slice;
 
 function toArray(a, i, j) {
@@ -79,6 +80,7 @@ function Carousel(carousel, options) {
      * @param  {[type]} imgUrl [description]
      * @return {[type]}        [description]
 */
+
     function createStr(imgUrl) {
         var str = '<figure style="transform:rotateY({0}deg) translateZ({1}) scaleY(.9);position:absolute;">'
             + '<img src="{2}" style="width:100%;height:100%;">'
@@ -163,16 +165,18 @@ function Carousel(carousel, options) {
                 $spinner.css("transition","");
                 $spinner.css("-moz-transition","");
                 callback && callback();
-            })
+            });
     };
-
+    this.selected = function (count) {
+        var t =
+    }
     /**
      * 视频播放
      * @param  {[type]} index   [description]
      * @param  {[type]} element [description]
      * @return {[type]}         [description]
 */
-    this.palyVideo = function(e) {
+    this.palyVideo = function() {
         //索引从0开始
         var index = currIndex - 1;
 
@@ -195,9 +199,7 @@ function Carousel(carousel, options) {
         //播放
         $video.on("loadeddata",function() {
             $video[0].play();
-            setTimeout(function () {
-                e.load()
-            },1000)
+
         });
 
         //停止
@@ -206,7 +208,6 @@ function Carousel(carousel, options) {
             //退出效果
             $video.addClass("bounceOut").one("animationend webkitAnimationEnd", function() {
                 $video.remove();
-                e.complete()
             })
         });
         $carousel.after($video)
