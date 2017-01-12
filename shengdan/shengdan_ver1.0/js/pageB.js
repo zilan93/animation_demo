@@ -10,8 +10,8 @@ function pageB(element,pageComplete) {
         var e = $.Deferred();
         return function () {
             r(e)
-        }.defer(500),
-            e
+        }.defer(500);
+        e;
     }
     function r(e) {
         var t = o(),
@@ -22,24 +22,32 @@ function pageB(element,pageComplete) {
                     ++n;
                     a()
                 })
-            }
-    }i
-    function (e,t,n) {
+            },
+            a = function () {
+                return n > r ? (t.destroy(),void function () {
+                    e.resolve()
+                }.defer(1000)) : void function () {
+                    s()
+                }.defer(1000)
+            };
+            s()
+    }
+    function i(e,t,n) {
         t.run(e);
-            d.choose(function(
-                t.selected(function(
-                    t.playVideo({
-                        load:function(
-                            d.reset();
-                            t.reset();
-                            p.strip(e);
-                        ),
-                complete:function() {
-                                n()
-        }
+        girlAction.choose(function() {
+            t.selected(function () {
+                t.playVideo({
+                    load: function () {
+                        girlAction.reset();
+                        t.reset();
+                        boyAction.strip(e);
+                    },
+                    complete: function () {
+                        n()
+                    }
                 })
-                ))
-            ))
+            })
+        })
     }
     function o() {
         var e = new Carousel($carousel,{

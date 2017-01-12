@@ -167,16 +167,25 @@ function Carousel(carousel, options) {
                 callback && callback();
             });
     };
-    this.selected = function (count) {
-        var t =
-    }
+    this.selected = function (e) {
+        var t = $contentElements.find("img"),
+            n = t.length;
+        t.transition({
+            scale:1.5
+        },2000,"linear",function () {
+            return 1 === n ? void e() : void n--
+        })
+    };
+    this.destroy = function () {
+        $spinner.remove()
+    };
     /**
      * 视频播放
      * @param  {[type]} index   [description]
      * @param  {[type]} element [description]
      * @return {[type]}         [description]
 */
-    this.palyVideo = function() {
+    this.playVideo = function(e) {
         //索引从0开始
         var index = currIndex - 1;
 
@@ -199,7 +208,9 @@ function Carousel(carousel, options) {
         //播放
         $video.on("loadeddata",function() {
             $video[0].play();
-
+            setTimeout(function () {
+                e.load()
+            },1000)
         });
 
         //停止
@@ -208,6 +219,7 @@ function Carousel(carousel, options) {
             //退出效果
             $video.addClass("bounceOut").one("animationend webkitAnimationEnd", function() {
                 $video.remove();
+                e.complete()
             })
         });
         $carousel.after($video)
