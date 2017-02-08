@@ -8,7 +8,7 @@ var animationAction = (function () {
         visualWidth = container.width(),
         visualHeight = container.height(),
         boyAction = {};
-//动画结束事件
+//动画结束事件兼容处理
     var animationEnd = (function () {
         var explorer = navigator.userAgent;
         if(~explorer.indexOf('webkit')) {
@@ -16,7 +16,7 @@ var animationAction = (function () {
         }
         return 'animationend';
     })();
-//音频播放
+//音频播放函数
     function html5Audio(url,isloop) {
         var audio = new Audio(url);
         audio.autoplay = true;
@@ -50,7 +50,6 @@ var animationAction = (function () {
         }
     };
     function BoyWalk() {
-        var container = $(".ani_wrap");
         //设置小男孩位置
         var $boy = $("#boy");
         var boyWidth = $boy.width();
@@ -63,6 +62,7 @@ var animationAction = (function () {
             var data = getValue(".a_background_middle");
             return data.offsetTop + data.height / 2;
         }();
+        //初始化小男孩的位置
         $boy.css({
             "top" : pathY - boyHeight +25 + "px"
         });
@@ -95,7 +95,7 @@ var animationAction = (function () {
             },time);
             return dl;
         }
-        //走路到指定位置
+        //移动到指定位置
         function startRun(options,runTime) {
             var dfd = $.Deferred();
             restoreWalk();
